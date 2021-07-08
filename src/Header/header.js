@@ -2,7 +2,14 @@ import { Component } from "react"
 import { Link } from 'react-router-dom'
 
 class Header extends Component{
+    
     render(){
+        const logout = () =>{ 
+            localStorage.clear()
+            window.location.href= '/'
+        }
+        const token = localStorage.getItem('token')
+    // const type = localStorage.getItem('type')
         return(
             <>
                 <nav className = "navbar">
@@ -10,6 +17,12 @@ class Header extends Component{
                         <Link to='/' className= 'navbar-logo'>StudyAbroad</Link>
                         
                         <ul>
+                        <li className= "nav_item">
+                                <Link to='/' className='nav-links'>
+                                    Home
+                                </Link>
+                            </li>
+
                             <li className= "nav_item">
                                 <Link to='/countries' className='nav-links'>
                                     Countries
@@ -34,6 +47,15 @@ class Header extends Component{
                                 </Link>
                             </li>
 
+                           
+                        {token?<>
+                            <li className= "nav_item">
+                                <Link to='/' className='nav-links' onClick ={logout}>
+                                    Logout
+                                </Link>
+                            </li>
+
+                            </>:<>
                             <li className= "nav_item">
                                 <Link to='/register' className='nav-links'>
                                     Sign-Up
@@ -45,6 +67,9 @@ class Header extends Component{
                                     Sign_In
                                 </Link>
                             </li>
+
+                        </>}
+                          
                         </ul>
 
                         
