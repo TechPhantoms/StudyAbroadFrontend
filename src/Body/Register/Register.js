@@ -1,5 +1,6 @@
 import { Component } from "react";
 import axios from 'axios'
+import './register.css'
 
 
 class Register extends Component{
@@ -36,9 +37,11 @@ class Register extends Component{
 
     render(){
         return(
+        <div className = 'container'>
             <div className = 'SignUp-box'> 
-                <h1> Register</h1>
+                {/* <h1> Register</h1> */}
                 <form>
+                <h2 className ="text"> Register</h2>
                 <div className='text-box'>
                 <i class="fas fa-user"></i>
                 <input type="text" value = {this.state.firstname} onChange= {(event => {this.setState({firstname: event.target.value})})} placeholder='Firstname'/>
@@ -66,6 +69,7 @@ class Register extends Component{
 
                 <button onClick={this.submitUser} className='Submit-Btn'>Submit</button>
                 </form>
+            </div>
             </div>
         )
     }
