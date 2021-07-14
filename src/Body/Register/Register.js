@@ -38,9 +38,11 @@ class Register extends Component{
     render(){
         return(
         <div className = 'container'>
-            <div className = 'SignUp-box'> 
-                {/* <h1> Register</h1> */}
-                <form>
+            {/* <div className = 'forms-container'>  */}
+                    {/* <div className='signin-signup'> */}
+               
+                <form action='' >
+                    {/* <div className='signup-form'> */}
                 <h2 className ="text"> Register</h2>
                 <div className='text-box'>
                 <i class="fas fa-user"></i>
@@ -68,8 +70,41 @@ class Register extends Component{
                 </div>
 
                 <button onClick={this.submitUser} className='Submit-Btn'>Submit</button>
+
+
+                <p className='social-text'>Or</p>
+               
+                {/* </div> */}
                 </form>
-            </div>
+                <div className='social-media'>
+                    <div className='social-icon'>
+                         <i className='fab fa-facebook-f'></i>
+                    </div>
+
+                <div className='social-icon'>
+                    <i className='fab fa-twitter'></i>
+                    </div>
+
+                <div className='social-icon'>
+                    <i className='fab fa-google'></i>
+                    </div>
+
+                <div className='social-icon'>
+                    <i className='fab fa-linkedin-in'></i>
+                    </div>
+
+                    </div>
+
+                {/* <div className = "signup-box">
+                    <div className='signin'>
+                    <p>Are you one of Us?</p>
+                    <button>SignIn</button>
+                    </div>
+                </div> */}
+
+                {/* </div> */}
+                
+                {/* </div> */}
             </div>
         )
     }
