@@ -35,22 +35,26 @@ class Login extends Component{
         }
         return(
             <div className = 'login-box'>
-                <h1>Login</h1>
+                <h2 className="textlogin">Login</h2>
 
                 <form>
-                    <div className = 'textbox'>
+                    <div className = 'text-box'>
                         <i class = "fas fa-user"></i>
                         <input type = 'text' name = 'username' placeholder='Username' value={this.state.username} onChange={this.inputHandler}/>
                     </div>
 
-                    <div className = 'textbox'>
+                    <div className = 'text-box'>
                         <i class = "fas fa-lock"></i>
                         <input type = 'password' name = 'password' placeholder='Password' value={this.state.password} onChange={this.inputHandler}/>
                     </div>
 
                     <button onClick= {this.submitLogin} className='login-btn'>Sign In</button>
                 </form>
+                   <div className='boyimg'>
+                   
+                </div>
             </div>
+            
         )
     }
 }
