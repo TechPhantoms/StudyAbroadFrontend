@@ -12,7 +12,7 @@ position: relative;
 
 }
 .navbar{
-  background: black; 
+  background: #3BDE8C; 
   height: 60px;
   display: flex;
   justify-content: center;
@@ -61,7 +61,7 @@ margin: 0 5px;
 }
 
 .navbar-logo {
-  color: rgb(255, 247, 0);
+  color: white;
   font-size: 25px;
   font-weight: 600;  
 }
