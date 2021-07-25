@@ -1,4 +1,4 @@
-@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+/* @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 *{
     padding: 0;
     margin: 0;
@@ -13,106 +13,34 @@ body,input{
     position: relative;
     width: 100%;
     min-height: 100vh;
-    /* background-color: #fff; */
     overflow: hidden;
 }
 
-/* .container::before{
-    content: '';
-    position: absolute;
-    width: 2000px;
-    height: 2000px;
-    border-radius: 50%;
-    background: linear-gradient(-45deg, #3BDE8C, #349464);
-} */
 
-/* .forms-container{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-} */
-
-/* .SignUp-box{
-    
-    width: 280px;
-    margin: auto;
-    /* position: absolute;
-    left: 50%;
-    top: 50%; */
-    /* border: 2px solid red; */
-
-/* } */ 
-
-/* .signin-signup{
-    position: absolute;
-    top: 50%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    display: grid;
-    grid-template-columns: 1fr;
-} */
-
-/* .signup-box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; 
-    padding: 0 5 rem; */
-    /* overflow: hidden;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2; */
-/* } */
 form{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-/* 
-.signup-box .signup-form{
-    z-index: 2;
-} */
-
-/* .signup-box .signin{
-    z-index: 1;
-} */
-
-
-
-
 
 .text{
     text-align: center;
     font-size: 2.2rem;
     color: #3BDE8C;
     margin: 20px 0;
-    /* margin-bottom: 20px; */
     
 }
-
-/* .text-box{
-    width: 100%;
-    overflow: hidden;
-    font-size: 20px;
-    padding: 6px 0px;
-    margin: 6px 0px;
-    border-bottom: 1px solid blue;
-} */
 
 .text-box{
     max-width: 380px;
     width: 100%;
     height: 43px;
-    /* background-color: #f0f0f0; */
     border: 2px solid #acacac ;
     margin: 5px 0;
     border-radius: 40px;
     display:grid;
     grid-template-columns: 15% 85%;
-    /* padding: 0.1rem; */
 
 }
 
@@ -135,16 +63,6 @@ form{
     margin-bottom: 5px;
 }
 
-/* .Submit-Btn{
-    width: 100%;
-    background: none;
-    border: 2px solid rgb(83, 233, 103);
-    color: rgb(58, 55, 55);
-    padding: 8px;
-    margin: 10px 0;
-    cursor: pointer;
-    border-radius: 7px;
-} */
 
 .Submit-Btn{
     width: 160px;
@@ -196,8 +114,7 @@ form{
 .social-icon:hover{
     color:#3BDE8C;
     border-color: #333;
-    /* background-color:#6fc99c; */
     height: 50px;
     width: 50px;
 }
-
+ */
