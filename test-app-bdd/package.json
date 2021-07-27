@@ -1,0 +1,19 @@
+{
+  "name": "test-app-bdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "cucumber.js features"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "chromedriver": "^92.0.0",
+    "cucumber": "^7.0.0-rc.0",
+    "i": "^0.3.6",
+    "selenium-webdriver": "^4.0.0-beta.4"
+  }
+}
