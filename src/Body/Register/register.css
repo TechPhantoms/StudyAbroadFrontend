@@ -1,4 +1,4 @@
-/* @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 *{
     padding: 0;
     margin: 0;
@@ -9,7 +9,7 @@ body,input{
     font-family: 'Poppins', sans-serif;
 }
 
-.container{
+.containerr{
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -117,4 +117,4 @@ form{
     height: 50px;
     width: 50px;
 }
- */
+

@@ -7,6 +7,7 @@ import Login from './Body/Login/Login';
 import LoginRegister from './Body/signup_signin/login_register';
 import Countries from './Body/Countries/countries';
 import CountriesDetails from './Body/CountriesDetails/CountriesDetails'
+import AddCountries from './Body/AddCountries/addCountries';
 import {BrowserRouter as Router, Switch ,Route} from 'react-router-dom'
 
 function App() {
@@ -17,9 +18,10 @@ function App() {
         <Route path = '/' exact component = {Home}/>
         <Route path = '/countries'  component ={Countries}/>
         <Route path = '/register' component = {Register}/>
-        <Route path ='/login/register' component={LoginRegister}/>
+        {/* <Route path ='/login/register' component={LoginRegister}/> */}
         <Route path = '/login' component = {Login}/>
         <Route path = '/countriessssss/:id' component = {CountriesDetails}/>
+        <Route path ='/addCountries' component={AddCountries}/>
       </Switch>
     </Router>
   )
