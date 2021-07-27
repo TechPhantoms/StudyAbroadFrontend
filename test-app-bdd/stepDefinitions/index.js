@@ -31,6 +31,7 @@ Given("Test login functionality",{timeout: 30000}, async function(){
     await driver.wait(until.elementLocated(By.id("registerationForm")),30000);
     expect(await driver.wait(unitil.elementLocated(By.id("registrationForm"))));
     //await driver.quit();
+    // gcvnb
     
 
 })
