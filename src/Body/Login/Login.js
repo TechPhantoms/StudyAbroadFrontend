@@ -2,16 +2,17 @@ import { Component } from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
 import './login.css'
+import images from '../../images/img.png'
 
-class Login extends Component{
-    state ={
-        username : "",
-        password : ""
+class Login extends Component {
+    state = {
+        username: "",
+        password: ""
     }
 
-    inputHandler = (e) =>{
+    inputHandler = (e) => {
         this.setState({
-            [e.target.name] : e.target.value
+            [e.target.name]: e.target.value
         })
     }
 
@@ -20,19 +21,20 @@ class Login extends Component{
     submitLogin = (e) => {
         e.preventDefault();
         axios.post('http://localhost:90/login', this.state)
-        .then((response) =>{
-            console.log(response)
-            localStorage.setItem('token', response.data.token)
-            window.location.reload()
-        })
-        .catch((err)=>{
-            console.log(err.response)
-        })
+            .then((response) => {
+                console.log(response)
+                localStorage.setItem('token', response.data.token)
+                window.location.reload()
+            })
+            .catch((err) => {
+                console.log(err.response)
+            })
     }
-    render(){
-        if(localStorage.getItem('token')){
-            return <Redirect to = "/home"/>
+    render() {
+        if (localStorage.getItem('token')) {
+            return <Redirect to="/home" />
         }
+<<<<<<< HEAD
         return(
             <div className = 'login-box'>
                 <h2 className="textlogin">Login</h2>
@@ -41,18 +43,97 @@ class Login extends Component{
                     <div className = 'text-box'>
                         <i class = "fas fa-user"></i>
                         <input type = 'text' name = 'username' placeholder='Username' value={this.state.username} onChange={this.inputHandler}/>
-                    </div>
+=======
+        return (
+            // <div className = 'login-box'>
+            //     <h1>Login</h1>
 
+            //     <form>
+            //         <div className = 'textbox'>
+            //             <i class = "fas fa-user"></i>
+            //             <input type = 'text' name = 'username' placeholder='Username' value={this.state.username} onChange={this.inputHandler}/>
+            //         </div>
+
+            //         <div className = 'textbox'>
+            //             <i class = "fas fa-lock"></i>
+            //             <input type = 'password' name = 'password' placeholder='Password' value={this.state.password} onChange={this.inputHandler}/>
+            //         </div>
+
+            //         <button onClick= {this.submitLogin} className='login-btn'>Sign In</button>
+            //     </form>
+            // </div>
+
+            <div className='container'>
+                <div className='form-container'>
+                    <div class="signin-signup">
+                        <form className='sign-in-form'>
+                            <h2 className='title'>Sign In</h2>
+                            <div className='input-field'>
+                                <i class="fas fa-user"></i>
+                                <input type='text' name='username' placeholder='Username' value={this.state.username} onChange={this.inputHandler} />
+                            </div>
+
+                            <div className='input-field'>
+                                <i class="fas fa-lock"></i>
+                                <input type='password' name='password' placeholder='Password' value={this.state.password} onChange={this.inputHandler} />
+                            </div>
+
+                            <button onClick={this.submitLogin} className='btn solid'>Sign In</button>
+
+                            <p class="social-text">Or Sign in with social platforms</p>
+                            <div class="social-media">
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-google"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </form>
+>>>>>>> phantom
+                    </div>
+                </div>
+                <div class="panels-container">
+                    <div class="panel left-panel">
+                        <div class="content">
+                            <h3>New here ?</h3>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
+                                ex ratione. Aliquid!
+                            </p>
+                            <button class="btn transparent" id="sign-up-btn">
+                                Sign up
+                            </button>
+                        </div>
+                       
+
+<<<<<<< HEAD
                     <div className = 'text-box'>
                         <i class = "fas fa-lock"></i>
                         <input type = 'password' name = 'password' placeholder='Password' value={this.state.password} onChange={this.inputHandler}/>
+=======
+                        <img src={images} classname="login-image" alt="" />
+                    
+>>>>>>> phantom
                     </div>
+                </div>
 
+
+
+<<<<<<< HEAD
                     <button onClick= {this.submitLogin} className='login-btn'>Sign In</button>
                 </form>
                    <div className='boyimg'>
                    
                 </div>
+=======
+>>>>>>> phantom
             </div>
             
         )

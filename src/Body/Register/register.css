@@ -10,6 +10,7 @@ input {
   font-family: "Poppins", sans-serif;
 }
 
+<<<<<<< HEAD
 .container {
   background: url("../images/signIn.png") no-repeat center center/cover;
   position: relative;
@@ -122,6 +123,41 @@ form {
   display: grid;
   grid-template-columns: 15% 85%;
   /* padding: 0.1rem; */
+=======
+.containerr{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text{
+    text-align: center;
+    font-size: 2.2rem;
+    color: #3BDE8C;
+    margin: 20px 0;
+    
+}
+
+.text-box{
+    max-width: 380px;
+    width: 100%;
+    height: 43px;
+    border: 2px solid #acacac ;
+    margin: 5px 0;
+    border-radius: 40px;
+    display:grid;
+    grid-template-columns: 15% 85%;
+
+>>>>>>> phantom
 }
 
 .text-box i {
@@ -143,16 +179,6 @@ form {
   margin-bottom: 5px;
 }
 
-/* .Submit-Btn{
-    width: 100%;
-    background: none;
-    border: 2px solid rgb(83, 233, 103);
-    color: rgb(58, 55, 55);
-    padding: 8px;
-    margin: 10px 0;
-    cursor: pointer;
-    border-radius: 7px;
-} */
 
 .Submit-Btn {
   width: 160px;
@@ -199,6 +225,7 @@ form {
   transition: 0.3s;
 }
 
+<<<<<<< HEAD
 .social-icon:hover {
   color: #3bde8c;
   border-color: #333;
@@ -211,4 +238,11 @@ form {
   position: relative;
   margin-top: -310px;
   width: 500px;
+=======
+.social-icon:hover{
+    color:#3BDE8C;
+    border-color: #333;
+    height: 50px;
+    width: 50px;
+>>>>>>> phantom
 }
