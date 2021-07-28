@@ -43,7 +43,7 @@ class Header extends Component {
                             </li>
 
                             <li className="nav_item">
-                                <Link to='/News' className='nav-links'>
+                                <Link to='/news' className='nav-links'>
                                     News&policy
                                 </Link>
                             </li>
