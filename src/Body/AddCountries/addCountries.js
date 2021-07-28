@@ -65,7 +65,7 @@ class AddCountries extends Component{
     render(){
         return(
             <div className='add-section'>
-                <h1>Add Countreis</h1>
+                <h1>Add Countries</h1>
                 <form>
                     <div className='addText-box'>
                         <label for ='countryImage'><b>Country Image</b></label>
