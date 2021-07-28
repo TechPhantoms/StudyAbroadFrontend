@@ -34,16 +34,6 @@ class Login extends Component {
         if (localStorage.getItem('token')) {
             return <Redirect to="/home" />
         }
-<<<<<<< HEAD
-        return(
-            <div className = 'login-box'>
-                <h2 className="textlogin">Login</h2>
-
-                <form>
-                    <div className = 'text-box'>
-                        <i class = "fas fa-user"></i>
-                        <input type = 'text' name = 'username' placeholder='Username' value={this.state.username} onChange={this.inputHandler}/>
-=======
         return (
             // <div className = 'login-box'>
             //     <h1>Login</h1>
@@ -96,7 +86,6 @@ class Login extends Component {
                                 </a>
                             </div>
                         </form>
->>>>>>> phantom
                     </div>
                 </div>
                 <div class="panels-container">
@@ -113,27 +102,15 @@ class Login extends Component {
                         </div>
                        
 
-<<<<<<< HEAD
-                    <div className = 'text-box'>
+                    {/* <div className = 'text-box'>
                         <i class = "fas fa-lock"></i>
                         <input type = 'password' name = 'password' placeholder='Password' value={this.state.password} onChange={this.inputHandler}/>
-=======
-                        <img src={images} classname="login-image" alt="" />
-                    
->>>>>>> phantom
-                    </div>
+                    </div> */}
                 </div>
 
 
 
-<<<<<<< HEAD
-                    <button onClick= {this.submitLogin} className='login-btn'>Sign In</button>
-                </form>
-                   <div className='boyimg'>
-                   
-                </div>
-=======
->>>>>>> phantom
+            </div>
             </div>
             
         )

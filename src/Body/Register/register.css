@@ -10,120 +10,6 @@ input {
   font-family: "Poppins", sans-serif;
 }
 
-<<<<<<< HEAD
-.container {
-  background: url("../images/signIn.png") no-repeat center center/cover;
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  /* background-color: #fff; */
-  overflow: hidden;
-}
-.boyimg {
-  height: 500px;
-}
-/* .container::before{
-    content: '';
-    position: absolute;
-    width: 2000px;
-    height: 2000px;
-    border-radius: 50%;
-    background: linear-gradient(-45deg, #3BDE8C, #349464);
-} */
-
-/* .forms-container{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-} */
-
-/* .SignUp-box{
-    
-    width: 280px;
-    margin: auto;
-    /* position: absolute;
-    left: 50%;
-    top: 50%; */
-/* border: 2px solid red; */
-
-/* } */
-
-/* .signin-signup{
-    position: absolute;
-    top: 50%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    display: grid;
-    grid-template-columns: 1fr;
-} */
-
-/* .signup-box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; 
-    padding: 0 5 rem; */
-/* overflow: hidden;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2; */
-/* } */
-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-/* 
-.signup-box .signup-form{
-    z-index: 2;
-} */
-
-/* .signup-box .signin{
-    z-index: 1;
-} */
-
-.text {
-  text-align: center;
-  font-size: 2.2rem;
-  color: black;
-  margin: 20px 0;
-  /* margin-bottom: 20px; */
-}
-
-form {
-  position: relative;
-  margin-top: 70px;
-  padding-left: 800px;
-}
-.social-media {
-  position: relative;
-  margin-top: 0px;
-  padding-left: 800px;
-}
-/* .text-box{
-    width: 100%;
-    overflow: hidden;
-    font-size: 20px;
-    padding: 6px 0px;
-    margin: 6px 0px;
-    border-bottom: 1px solid blue;
-} */
-
-.text-box {
-  max-width: 380px;
-  width: 100%;
-  height: 43px;
-  /* background-color: #f0f0f0; */
-  border: 2px solid #acacac;
-  margin: 5px 0;
-  border-radius: 40px;
-  display: grid;
-  grid-template-columns: 15% 85%;
-  /* padding: 0.1rem; */
-=======
 .containerr{
     position: relative;
     width: 100%;
@@ -157,7 +43,6 @@ form{
     display:grid;
     grid-template-columns: 15% 85%;
 
->>>>>>> phantom
 }
 
 .text-box i {
@@ -225,7 +110,6 @@ form{
   transition: 0.3s;
 }
 
-<<<<<<< HEAD
 .social-icon:hover {
   color: #3bde8c;
   border-color: #333;
@@ -238,11 +122,4 @@ form{
   position: relative;
   margin-top: -310px;
   width: 500px;
-=======
-.social-icon:hover{
-    color:#3BDE8C;
-    border-color: #333;
-    height: 50px;
-    width: 50px;
->>>>>>> phantom
 }

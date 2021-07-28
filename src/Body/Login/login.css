@@ -10,14 +10,14 @@ input {
   width: 100%;
   height: 43px;
   /* background-color: #f0f0f0; */
-  border: 2px solid #acacac;
+  /* border: 2px solid #acacac;
   margin: 5px 0;
   border-radius: 40px;
   display: grid;
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 15% 85%; */
   /* padding: 0.1rem; */
-}
-
+/* } */
+/* 
 .text-box i {
   text-align: center;
   line-height: 43px;
@@ -49,7 +49,7 @@ form {
 }
 .textlogin {
   text-align: right;
-}
+} */
 /* 
 .login-box {
   width: 280px;
@@ -81,7 +81,7 @@ form {
   margin: 0px 10px;
   color: rgb(58, 55, 55);
 } */
-.login-btn {
+/* .login-btn {
   width: 160px;
   height: 40px;
   border: none;
@@ -94,14 +94,14 @@ form {
   font-weight: 500;
   margin: 25px 0;
   transition: 0.5s;
-}
+} */
 
 /* .section {
   display: flex;
   width: 100%;
   margin-top: 30px;
 } */
-
+/* 
 .section h2 {
   font-size: 12px;
   margin: 10px 5px;
@@ -110,16 +110,6 @@ form {
   color: rgb(58, 55, 55);
 }
 
-<<<<<<< HEAD
-.login-btn2 {
-  width: 25%;
-  font-size: 10px;
-  background: black;
-  color: white;
-  padding: 8px 0;
-  margin: 10px 0;
-  cursor: pointer;
-=======
 .login-btn2{
     width: 25%;
     font-size: 10px;
@@ -128,7 +118,7 @@ form {
     padding: 8px 0;
     margin: 10px 0;
     cursor: pointer;
-} */
+}  */
 
 
 .container{
@@ -137,7 +127,6 @@ form {
     background-color: #fff;
     min-height: 100vh;
     overflow: hidden;
->>>>>>> phantom
 }
 
 .forms-container {
