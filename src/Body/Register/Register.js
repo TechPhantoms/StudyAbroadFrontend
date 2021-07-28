@@ -76,24 +76,20 @@ class Register extends Component {
 
                     {/* </div> */}
                     </form>
-                    <div className='social-media'>
-                        <div className='social-icon'>
-                             <i className='fab fa-facebook-f'></i>
-                        </div>
-
-                    <div className='social-icon'>
-                        <i className='fab fa-twitter'></i>
-                        </div>
-
-                    <div className='social-icon'>
-                        <i className='fab fa-google'></i>
-                        </div>
-
-                    <div className='social-icon'>
-                        <i className='fab fa-linkedin-in'></i>
-                        </div>
-
-                        </div>
+                     <div class="social-media">
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-google"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
                 </div>
 
             // <div className='containerr'>

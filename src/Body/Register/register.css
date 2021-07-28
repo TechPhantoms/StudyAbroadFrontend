@@ -10,39 +10,36 @@ input {
   font-family: "Poppins", sans-serif;
 }
 
-.containerr{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
+.containerr {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-
-form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.text{
-    text-align: center;
-    font-size: 2.2rem;
-    color: #3BDE8C;
-    margin: 20px 0;
-    
+.text {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #3bde8c;
+  margin: 20px 0;
 }
 
-.text-box{
-    max-width: 380px;
-    width: 100%;
-    height: 43px;
-    border: 2px solid #acacac ;
-    margin: 5px 0;
-    border-radius: 40px;
-    display:grid;
-    grid-template-columns: 15% 85%;
-
+.text-box {
+  max-width: 380px;
+  width: 100%;
+  height: 43px;
+  border: 2px solid #acacac;
+  margin: 5px 0;
+  border-radius: 40px;
+  display: grid;
+  grid-template-columns: 15% 85%;
 }
 
 .text-box i {
@@ -63,7 +60,6 @@ form{
   line-height: 1;
   margin-bottom: 5px;
 }
-
 
 .Submit-Btn {
   width: 160px;
@@ -87,7 +83,6 @@ form{
 .social-text {
   padding: 0.7rem 0;
   font-size: 1rem;
-  margin-bottom: 15px;
 }
 
 .social-media {
@@ -98,15 +93,15 @@ form{
 .social-icon {
   height: 46px;
   width: 46px;
-  border: 1px solid #333;
-  margin: 0 0.45rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
+  margin: 0 0.45rem;
   color: #333;
-  font-size: 1.1rem;
   border-radius: 50%;
+  border: 1px solid #333;
+  text-decoration: none;
+  font-size: 1.1rem;
   transition: 0.3s;
 }
 

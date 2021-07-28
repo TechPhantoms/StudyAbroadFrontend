@@ -1,48 +1,48 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
 }
 
-.countries{
-    /* display: flex;
+.countries {
+  /* display: flex;
     justify-content: center;
     align-items: center;
     flex-direction:column;
     min-height: 100vh; */
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    width: 100%;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
-.countries h1{
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: rgba(0,0,0,0.8);
+.countries h1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.8);
 }
 
-.card{
-    width: 100vh;
-    display: flex;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-    grid-gap: 20px;
-    padding: 20px;
-    margin-left: 22px;
-    
+.card {
+  width: 100vh;
+  display: grid;
+  justify-content: center;
+  /* grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); */
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  padding: 20px;
+  margin-left: 22px;
 }
 
-.card .box{
-    position: relative;
-    height: 250px;
-    width: 350px;
-    box-shadow: 0 30px 30px rgba(0,0,0,0.4);
-    overflow: hidden;
-    border-radius: 10px;
-    text-align: center;
+.card .box {
+  position: relative;
+  height: 250px;
+  width: 350px;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  border-radius: 10px;
+  text-align: center;
 }
 
 /* .card .box::before{
@@ -61,21 +61,21 @@
     top:50%
 } */
 
-.card .box .imgbox{
-    width:100%;
-    height:70%;
+.card .box .imgbox {
+  width: 100%;
+  height: 70%;
 }
 
-.card .box .imgbox img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.card .box .imgbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.box h1{
-    margin: 8px 0;
-    font-size: 15px;
-    position: relative;
+.box h1 {
+  margin: 8px 0;
+  font-size: 15px;
+  position: relative;
 }
 
 /* .box:hover h1{
@@ -87,31 +87,27 @@
     position: relative;
 } */
 
-.visit-btn{
-    /* border: 2px solid red; */
-    border-radius: 5px;
-    /* font-size: 15px; */
-    width: 100%;
-    padding: 5px 0;
-    /* text-decoration: none; */
-    font-weight: bold;
-    font-family: sans-serif;
-
+.visit-btn {
+  /* border: 2px solid red; */
+  border-radius: 5px;
+  /* font-size: 15px; */
+  width: 100%;
+  padding: 5px 0;
+  /* text-decoration: none; */
+  font-weight: bold;
+  font-family: sans-serif;
 }
 
-.visit-btn:hover{
-    background-color: rgb(112, 253, 230);
+.visit-btn:hover {
+  background-color: rgb(112, 253, 230);
 }
 
-.btnn{
-    text-decoration: none;
-    font-size: 20xp;
-    text-align: center;
+.btnn {
+  text-decoration: none;
+  font-size: 20xp;
+  text-align: center;
 }
 
-.btnn:hover{
-    color: white;
+.btnn:hover {
+  color: white;
 }
-
-
-

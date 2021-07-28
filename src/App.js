@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './Header/header'
+import Footer  from './Footer/Footer'
 import Home from './Body/Home/index';
 import Register from './Body/Register/Register';
 import Login from './Body/Login/Login';
@@ -27,6 +28,7 @@ function App() {
         <Route path ='/addCountries' component={AddCountries}/>
 
       </Switch>
+      <Footer/>
     </Router>
   )
 

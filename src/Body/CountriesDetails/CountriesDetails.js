@@ -1,6 +1,8 @@
 import { Component } from "react";
 import axios from 'axios'
 import { Row } from "react-bootstrap";
+import './CountriesDetails.css'
+import { Button } from 'react-bootstrap';
 
 class CountriesDetails extends Component{
     
@@ -30,15 +32,24 @@ class CountriesDetails extends Component{
             // <Container>
                 <Row>
                     <div className = 'countries-details-section'>
+                        <div className='textCenter'> <h1>Study in the {this.state.CountriesInfo.countryName} </h1>
+                                        <p>Everything you need to know about studying in the {this.state.CountriesInfo.countryName}<br></br> as an international student.</p></div>
+                       
+                                  
                         {/* <div className='Countriesdetails'>{this.state.CountriesInfo((countryinfo) =>{
                             return( */}
                                 <div className='Country-info' key = {this.state.CountriesInfo._id}>
+                                    
                                     <div className=  'country-image'>
+                                        
                                         <img src = {`http://localhost:90/${this.state.CountriesInfo.countryImage}`}/>
+                            
                                     </div>
+                                    <div className='contain'>
                                     <div className='why-study'>
                                         <h1>Why study in {this.state.CountriesInfo.countryName}?</h1>
                                         <p>{this.state.CountriesInfo.whyStudy}</p>
+                                        <Button>View university</Button>
                                     </div>
                                     <div className='best-programs'>
                                         <h1>What are the best programs in the {this.state.CountriesInfo.countryName}?</h1>
@@ -70,6 +81,7 @@ class CountriesDetails extends Component{
                                     <div className='howStudy'>
                                         <h1>How to study in {this.state.CountriesInfo.countryName}?</h1>
                                         <p>{this.state.CountriesInfo.howStudy}</p>
+                                    </div>
                                     </div>
                                 </div>
                             {/* )
