@@ -10,6 +10,9 @@ import CountriesDetails from './Body/CountriesDetails/CountriesDetails'
 import AddCountries from './Body/AddCountries/addCountries';
 import NewsandPolicy from './Body/NewsandPolicy/news';
 import AddNews from './Body/AddNews/addNews';
+import NewsDetails from './Body/NewsDetails/newsDetails';
+import Universities from './Body/Universities/universities';
+import Footer  from './Footer/Footer'
 import {BrowserRouter as Router, Switch ,Route} from 'react-router-dom'
 
 
@@ -23,12 +26,18 @@ function App() {
         <Route path = '/register' component = {Register}/>
         <Route path='/news' component={NewsandPolicy} />
         <Route path='/addNews' component={AddNews}/>
+        <Route path='/newsdetails/:id' component={NewsDetails}/>
         <Route path = '/countries'  component ={Countries}/>
         <Route path = '/countriessssss/:id' component = {CountriesDetails}/>
         <Route path ='/addCountries' component={AddCountries}/>
+        <Route path ='/Universities' component={Universities}/>
+      
+    
+
         {/* <Route path ='/login/register' component={LoginRegister}/> */}
 
       </Switch>
+      <Footer/>
     </Router>
   )
 

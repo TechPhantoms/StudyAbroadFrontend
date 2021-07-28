@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.heading-text{
+    text-align: center;
+    margin: 20px 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+.universities-section span{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.universities{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+}
+
+.universities-card{
+    margin: 15px 15px;
+}
+
+.universities-box{
+    /* border: 1px solid blue; */
+    width: 350px;
+    height: 550px;
+    box-shadow: 0 30px 30px rgba(0,0,0,10%);
+    border-radius: 7px;
+}
+
+.university-name{
+    margin: 10px 16px;
+    padding: 0 8px;
+
+}
+
+.universities-image img{
+    width: 350px;
+    height: 180px;
+    border-radius: 3px;
+}
+
+.university-details {
+    /* border: 2px solid red; */
+    width: 310px;
+    /* padding: 6px 7px; */
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+    /* margin-top: 6px; */
+}
+.university-info {
+    background-color: rgb(229, 233, 233);
+    border-radius: 6px;
+    padding: 4px 10px;
+    margin: 5px 5px;
+}
+
+.university-text{
+    margin: 7px 0;
+    font-size: 13px;
+    color: rgb(121, 117, 114);
+}
+
+.university-info p{
+    font-size: 13px;
+    color: rgb(121, 117, 114);
+}
+
+.university-info h3{
+    font-size: 15px;
+}
+
+.details-button{
+    border: 2px solid black;
+    width: 310px;
+    border-radius: 6px;
+    margin-left: 20px;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: rgb(242, 154, 23);
+   
+    
+}
+
+
+.university-button{
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 5px ;
+    color: #ffff;
+
+}
+
+.details-button:hover{
+    background-color: #191a1c;
+    color: #ffff;
+}
