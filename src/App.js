@@ -9,7 +9,7 @@ import Countries from './Body/Countries/countries';
 import CountriesDetails from './Body/CountriesDetails/CountriesDetails'
 import AddCountries from './Body/AddCountries/addCountries';
 import NewsandPolicy from './Body/NewsandPolicy/news';
-import AddNews from './Body/AddNews/addNews';
+import AddNews from './Body/AddNews/AddNews';
 import {BrowserRouter as Router, Switch ,Route} from 'react-router-dom'
 
 

@@ -31,9 +31,10 @@ class News extends Component{
             // <Container>
                 <Row>
                     <div className="news-section">
+                    <h1 classname="title">NEWS AND POLICIES</h1>
                         <div id="news">{this.state.News.map((news) =>{
                             return(
-                                <div className = "news-container" key={news._id}>
+                                <div className = "news-container" key={news._id}> 
                                     <Link  to={`/news/showall/${news._id}`}>
                                         <img src={`http://localhost:90/${news.Newsimage}`}  className='news-image'/>
                                     </Link>
