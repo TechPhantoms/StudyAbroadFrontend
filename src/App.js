@@ -13,6 +13,7 @@ import AddNews from './Body/AddNews/AddNews';
 import NewsDetails from './Body/NewsDetails/newsDetails';
 import Universities from './Body/Universities/universities';
 import Footer  from './Footer/Footer'
+import UniversityDetails from './Body/UniversityDetails/UniversityDetails';
 import {BrowserRouter as Router, Switch ,Route} from 'react-router-dom'
 
 
@@ -31,6 +32,7 @@ function App() {
         <Route path = '/countriessssss/:id' component = {CountriesDetails}/>
         <Route path ='/addCountries' component={AddCountries}/>
         <Route path ='/Universities' component={Universities}/>
+        <Route path = '/universitydetails/:id' component ={UniversityDetails}/>
       
     
 

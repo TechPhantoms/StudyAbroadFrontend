@@ -1,5 +1,6 @@
 import { Component } from "react";
 import axios from 'axios'
+import './NewsDetails.css'
 // import { Row } from "react-bootstrap";
 
 class NewsDetails extends Component {
@@ -34,11 +35,11 @@ class NewsDetails extends Component {
                     <h1>{this.state.NewsInfo.NewsTitle}</h1>
                 </div>
                 <div className='news-details'>
-                    <ul>
-                        <li>
+                    {/* <ul>
+                        <li> */}
                             {this.state.NewsInfo.NewsDetails}
-                        </li>
-                    </ul>
+                        {/* </li>
+                    </ul> */}
                 </div>
             </div>
         )
