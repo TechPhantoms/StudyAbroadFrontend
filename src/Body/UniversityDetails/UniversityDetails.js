@@ -9,7 +9,10 @@ class UniversityDetails extends Component {
         config: {
             headers: { authorization: `Bearer${localStorage.getItem('token')}` }
         },
-        id: this.props.match.params.id
+        id: this.props.match.params.id,
+        comment: '',
+        commentReply: '',
+        comments : []
     }
 
     componentDidMount() {
@@ -23,10 +26,41 @@ class UniversityDetails extends Component {
             .catch((err) => {
                 console.log(err.response)
             })
+        
+            axios.get("http://localhost:90/comment/showall")
+            .then((response)=>{
+                console.log(response)
+               this.setState({
+                   comments : response.data.data
+               })
+            })
+            .catch((err)=>{
+                console.log(err);
+            })
     }
+
+    inputHandler = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    PostComment = (e) => {
+        e.preventDefault();
+        axios.post('http://localhost:90/insert/comment', this.state,this.state.config)
+            .then((response) => {
+                console.log(response)
+                // localStorage.setItem('token', response.data.token)
+                window.location.reload()
+            })
+            .catch((err) => {
+                console.log(err.response)
+            })
+    }
+
     render() {
         return (
-        
+
             <div className='university-details-section'>
                 <div className='universityDetails' key={this.state.UniversityInfo._id}>
                     <div className='university-image'>
@@ -111,42 +145,42 @@ class UniversityDetails extends Component {
                     <div className='Fees-Funding'>
                         <h1>Fees and Fundings</h1>
                         <p>International student fees are guaranteed in advance for the duration of the study.
-                             {this.state.UniversityInfo.universityName} offers financial support for living and travel costs.</p>
+                            {this.state.UniversityInfo.universityName} offers financial support for living and travel costs.</p>
 
-                             <div className='fee-Information'>
-                                 <h2>Fee Information</h2>
-                                 <ul>
-                                     <li><p>{this.state.UniversityInfo.feeInformation1}</p></li>
-                                     <li><p>{this.state.UniversityInfo.feeInformation2}</p></li>
-                                 </ul>
-                             </div>
+                        <div className='fee-Information'>
+                            <h2>Fee Information</h2>
+                            <ul>
+                                <li><p>{this.state.UniversityInfo.feeInformation1}</p></li>
+                                <li><p>{this.state.UniversityInfo.feeInformation2}</p></li>
+                            </ul>
+                        </div>
 
-                             <div className='Funding'>
-                                 <h2>Funding</h2>
-                                 <div className='funding-title'>
-                                     <h3>{this.state.UniversityInfo.undergraduatefunding}</h3>
+                        <div className='Funding'>
+                            <h2>Funding</h2>
+                            <div className='funding-title'>
+                                <h3>{this.state.UniversityInfo.undergraduatefunding}</h3>
 
-                                     <p>{this.state.UniversityInfo.undergraduatefundingAmount}</p>
+                                <p>{this.state.UniversityInfo.undergraduatefundingAmount}</p>
 
-                                     
-                                         {this.state.UniversityInfo.undergraduatefunding1}
-                                         {this.state.UniversityInfo.undergraduatefunding2}
-                                         {this.state.UniversityInfo.undergraduatefunding3}
-                                         {this.state.UniversityInfo.undergraduatefunding4}
-                                     
-                                 </div>
 
-                                 <div className='funding-title'>
-                                     <h3>{this.state.UniversityInfo.postgraduatefunding}</h3>
+                                {this.state.UniversityInfo.undergraduatefunding1}
+                                {this.state.UniversityInfo.undergraduatefunding2}
+                                {this.state.UniversityInfo.undergraduatefunding3}
+                                {this.state.UniversityInfo.undergraduatefunding4}
 
-                                     <p>{this.state.UniversityInfo.postgraduateAmount}</p>
+                            </div>
 
-                                     
-                                         {this.state.UniversityInfo.postgraduateFunding1}
-                                         {this.state.UniversityInfo.postgraduateFunding2}
-                                     
-                                 </div>
-                             </div>
+                            <div className='funding-title'>
+                                <h3>{this.state.UniversityInfo.postgraduatefunding}</h3>
+
+                                <p>{this.state.UniversityInfo.postgraduateAmount}</p>
+
+
+                                {this.state.UniversityInfo.postgraduateFunding1}
+                                {this.state.UniversityInfo.postgraduateFunding2}
+
+                            </div>
+                        </div>
 
                     </div>
 
@@ -162,7 +196,27 @@ class UniversityDetails extends Component {
 
                 </div>
 
+                <div className='comment'>
+                        <h1>Post a comment</h1>
+                    <input type='text' name='username' placeholder='Username' value={this.state.username} onChange={this.inputHandler} />
+
+                </div>
+
+                {
+                    this.state.comments.length > 0 &&
+                    (
+                        this.state.comments.map((val)=>{
+                            return(
+                                <>
+                                    <p> {val.comment}  </p>
+                                </>
+                            )
+                        })
+                    )
+                }
+
             </div>
+
 
             // <h1>UniversityDetails</h1>
         )

@@ -14,6 +14,7 @@ import NewsDetails from './Body/NewsDetails/newsDetails';
 import Universities from './Body/Universities/universities';
 import Footer  from './Footer/Footer'
 import UniversityDetails from './Body/UniversityDetails/UniversityDetails';
+import AddUniversity from './Body/AddUniversity/AddUniversity';
 import {BrowserRouter as Router, Switch ,Route} from 'react-router-dom'
 
 
@@ -33,6 +34,7 @@ function App() {
         <Route path ='/addCountries' component={AddCountries}/>
         <Route path ='/Universities' component={Universities}/>
         <Route path = '/universitydetails/:id' component ={UniversityDetails}/>
+        <Route path = '/addUniversity' component={AddUniversity}/>
       
     
 
