@@ -12,7 +12,8 @@ class UniversityDetails extends Component {
         id: this.props.match.params.id,
         comment: '',
         commentReply: '',
-        comments : []
+        Comments: [],
+        university: []
     }
 
     componentDidMount() {
@@ -20,23 +21,35 @@ class UniversityDetails extends Component {
             .then(response => {
                 console.log(response)
                 this.setState({
-                    UniversityInfo: response.data
+                    UniversityInfo: response.data,
+                    university: response.data
                 })
             })
             .catch((err) => {
                 console.log(err.response)
             })
-        
-            axios.get("http://localhost:90/comment/showall")
-            .then((response)=>{
+
+        axios.get("http://localhost:90/comment/showall")
+            .then((response) => {
                 console.log(response)
-               this.setState({
-                   comments : response.data.data
-               })
+                this.setState({
+                    Comments: response.data.data
+                })
             })
-            .catch((err)=>{
+            .catch((err) => {
                 console.log(err);
             })
+
+        // axios.get("http://localhost:90/universities/showall")
+        // .then((response)=>{
+        //     console.log(response)
+        //     this.setState({
+        //         university :response.data
+        //     })
+        // })
+        // .catch((err) => {
+        //     console.log(err.response)
+        // })
     }
 
     inputHandler = (e) => {
@@ -47,7 +60,7 @@ class UniversityDetails extends Component {
 
     PostComment = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:90/insert/comment', this.state,this.state.config)
+        axios.post('http://localhost:90/insert/comment', this.state, this.state.config)
             .then((response) => {
                 console.log(response)
                 // localStorage.setItem('token', response.data.token)
@@ -194,18 +207,18 @@ class UniversityDetails extends Component {
                         <p>{this.state.UniversityInfo.locationStreetDetails}</p>
                     </div>
 
-                </div>
 
-                <div className='comment'>
-                        <h1>Post a comment</h1>
-                    <input type='text' name='username' placeholder='Username' value={this.state.username} onChange={this.inputHandler} />
+                    <div className='comment' >
+                    <h1>Post a comment</h1>
+                    <input type='text' name='comment' placeholder='add a comment' value={this.state.comment} onChange={this.inputHandler} />
 
-                </div>
+                    <button onClick={this.PostComment} className='comment-post'>Submit</button>
 
-                {
-                    this.state.comments.length > 0 &&
+
+                    {
+                    this.state.Comments.length > 0 &&
                     (
-                        this.state.comments.map((val)=>{
+                        this.state.Comments.map((val)=>{
                             return(
                                 <>
                                     <p> {val.comment}  </p>
@@ -215,10 +228,24 @@ class UniversityDetails extends Component {
                     )
                 }
 
+                </div>
+
+                </div>
+
+            
+                {/* <div className='user-feedback'>
+                    <h1>Post a comment</h1>
+                 
+                    <div className='comment'>{this.state.Comments.map((comments) => {
+                        return (
+                            
+                                <p>{comments.comment}</p>
+                        )
+                    })}</div>
+                </div> */}
+
+
             </div>
-
-
-            // <h1>UniversityDetails</h1>
         )
     }
 }

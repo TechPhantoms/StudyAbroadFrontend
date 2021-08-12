@@ -18,7 +18,7 @@ class Countries extends Component {
 
     componentDidMount() {
         axios.get("http://localhost:90/countries/showall")
-            .then(response => {
+            .then((response) => {
                 console.log(response)
                 this.setState({
                     Countries: response.data.data

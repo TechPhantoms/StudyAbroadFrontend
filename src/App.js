@@ -15,6 +15,13 @@ import Universities from './Body/Universities/universities';
 import Footer  from './Footer/Footer'
 import UniversityDetails from './Body/UniversityDetails/UniversityDetails';
 import AddUniversity from './Body/AddUniversity/AddUniversity';
+import MockTest from './Body/MockTest/mockTest';
+import Reading from './Body/MockTest/Reading/reading';
+import Speaking from './Body/MockTest/Speaking/speaking';
+import Listening from './Body/MockTest/Listening/listening';
+import Writing from './Body/MockTest/Writing/writing';
+import InstructionPage from './Body/MockTest/InstructionsPage/instructionpage';
+import ReadingTest from './Body/MockTest/Reading/test';
 import {BrowserRouter as Router, Switch ,Route} from 'react-router-dom'
 
 
@@ -35,8 +42,13 @@ function App() {
         <Route path ='/Universities' component={Universities}/>
         <Route path = '/universitydetails/:id' component ={UniversityDetails}/>
         <Route path = '/addUniversity' component={AddUniversity}/>
-      
-    
+        <Route path = '/exams' component= {MockTest}/>
+        <Route path ='/reading/test' component={Reading}/>
+        <Route path = '/listening/test' component={Listening}/>
+        <Route path = '/writing/test' component={Writing}/>
+        <Route path = '/speaking/test' component={Speaking}/>
+        <Route path = '/instruction/page' component={InstructionPage}/>
+        <Route path = '/test/reading' component={ReadingTest} />
 
         {/* <Route path ='/login/register' component={LoginRegister}/> */}
 
