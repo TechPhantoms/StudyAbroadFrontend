@@ -11,6 +11,27 @@ class ReadingTest extends Component {
         }
     }
 
+    constructor (props) {
+        super(props);
+        this.state = {
+            // questions : [],
+            currentQuestion : {},
+            nextQuestion : {},
+            previousQuestion: {},
+            answer : '',
+            numberofQuestions : 0,
+            numberofAnsweredQuestions : 0,
+            currentQuestionIndex : 0,
+            score: 0,
+            correntAnswers : 0,
+            wrongAnswers : 0,
+            hints : 5,
+            fiftyFifty: 2,
+            useFiftyFifty : false,
+            time : {}
+        }
+    }
+
     componentDidMount() {
         axios.get('http://localhost:90/test/showall')
             .then((response) => {
@@ -23,10 +44,27 @@ class ReadingTest extends Component {
                 console.log(err.response)
             })
     }
+
+    displayQuestions =(questions = this.state.ReadingTest, currentQuestion, nextQuestion, previousQuestion) =>{
+        let { currentQuestionIndex } = this.state;
+        if (!isEmpty(this.state.questions)){
+            questions = this.state.questions;
+            currentQuestion = questions[currentQuestionIndex];
+            nextQuestion = questions[currentQuestionIndex + 1];
+            previousQuestion = questions[currentQuestionIndex - 1];
+            const answer = currentQuestion.answer;
+            this.setState({
+                currentQuestion,
+                nextQuestion,
+                previousQuestion,
+                answer
+            })
+        }
+    }; 
     render() {
         return (
             <>
-                <Helmet><title>Test Page</title></Helmet>
+                <Helmet><title>Reading MockTest</title></Helmet>
                 <div className='readingTest-section'>{this.state.ReadingTest.map((readingtest) => {
                     return (
                         <>
