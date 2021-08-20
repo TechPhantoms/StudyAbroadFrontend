@@ -1,5 +1,10 @@
 import axios from 'axios';
 import React, { Component } from 'react';
+// import images from  './universitydetail.png'
+import images from  './uniimg.jpg'
+import image1 from './universitydetail.png'
+import image2 from './whystudy.png'
+import image3 from './fund.png'
 import './UniversityDetails.css'
 
 class UniversityDetails extends Component {
@@ -66,14 +71,14 @@ class UniversityDetails extends Component {
                     <div className='university-image'>
                         <img src={`http://localhost:90/${this.state.UniversityInfo.universityImage}`} />
                     </div>
-                    <div classname='university-name'>
+                    <div className='university-names'>
                         <h1>{this.state.UniversityInfo.universityName}</h1>
                         <p>Check whether {this.state.UniversityInfo.universityName} is right for you as an</p>
                         <p>intertnational student.</p>
                         <button className='university-website-btn'>Official university website</button>
                     </div>
                     <div className='university-box'>
-                        <div className='universities-name'>
+                        <div className='universities-named'>
                             <h3>{this.state.UniversityInfo.universityName}</h3>
                             <span>{this.state.UniversityInfo.universityLocation}</span>
                         </div>
@@ -108,12 +113,14 @@ class UniversityDetails extends Component {
                         </div>
                     </div>
                     <div className='studyAbroad'>
+                    <img src={images} />
                         <h1>Study abroad at {this.state.UniversityInfo.universityName}</h1>
                         <p>{this.state.UniversityInfo.studyAbroadPara1}</p>
                         <p>{this.state.UniversityInfo.studyAbroadPara2}</p>
                         <p>{this.state.UniversityInfo.studyAbroadPara3}</p>
                     </div>
                     <div className='whyStudy'>
+                    <img src={image1} />
                         <h1>Why study as {this.state.UniversityInfo.universityName}?</h1>
                         <div className='whyStudy-title'>
                             <h3>{this.state.UniversityInfo.whyStudyTitle1}</h3>
@@ -124,6 +131,7 @@ class UniversityDetails extends Component {
                             <p>{this.state.UniversityInfo.whyStudyPara2}</p>
                         </div>
                         <div className='whyStudy-title'>
+                        <img src={image2} />
                             <h3>{this.state.UniversityInfo.whyStudyTitle3}</h3>
                             <p>{this.state.UniversityInfo.whyStudyPara3}</p>
                         </div>
@@ -137,6 +145,7 @@ class UniversityDetails extends Component {
                         </div>
                     </div>
                     <div className='internationalStudents'>
+                    <img src={image3} />
                         <h1>Life as an international student</h1>
                         <p>{this.state.UniversityInfo.internationalLifePara1}</p>
                         <p>{this.state.UniversityInfo.internationalLifePara2}</p>
@@ -163,10 +172,10 @@ class UniversityDetails extends Component {
                                 <p>{this.state.UniversityInfo.undergraduatefundingAmount}</p>
 
 
-                                {this.state.UniversityInfo.undergraduatefunding1}
-                                {this.state.UniversityInfo.undergraduatefunding2}
-                                {this.state.UniversityInfo.undergraduatefunding3}
-                                {this.state.UniversityInfo.undergraduatefunding4}
+                               <p>{this.state.UniversityInfo.undergraduatefunding1}</p>
+                                <p>{this.state.UniversityInfo.undergraduatefunding2}</p>
+                                <p>{this.state.UniversityInfo.undergraduatefunding3}</p>
+                                <p>{this.state.UniversityInfo.undergraduatefunding4}</p>
 
                             </div>
 
@@ -176,8 +185,8 @@ class UniversityDetails extends Component {
                                 <p>{this.state.UniversityInfo.postgraduateAmount}</p>
 
 
-                                {this.state.UniversityInfo.postgraduateFunding1}
-                                {this.state.UniversityInfo.postgraduateFunding2}
+                               <p>{this.state.UniversityInfo.postgraduateFunding1}</p> 
+                               <p> {this.state.UniversityInfo.postgraduateFunding2}</p>
 
                             </div>
                         </div>
