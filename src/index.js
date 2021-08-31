@@ -4,7 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import '../node_modules/@mdi/font/css/materialdesignicons.min.css'
-import '../node_modules/materialize-css'
+import '../node_modules/materialize-css/dist/css/materialize.min.css'
+import '../node_modules/materialize-css/dist/js/materialize.min.js'
+import '../node_modules/classnames'
 
 ReactDOM.render(
   <React.StrictMode>

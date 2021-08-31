@@ -14,7 +14,7 @@
     margin: 0 auto;
     width: 70%;
     height: 490px;
-    border: 5px solid rgb(44, 40, 40);
+    /* border: 5px solid rgb(44, 40, 40); */
     /* overflow: scroll; */
     overflow-x: hidden;
     padding: 8px 15px;
@@ -59,6 +59,18 @@
     position: relative;
     top: -3px;
 }
+
+.lifeline-icon{
+    color: rgb(35, 179, 35);
+    cursor: pointer;
+  }
+
+  .lifeline-icon:hover{
+    color: rgb(221, 163, 54);
+    cursor: pointer;
+  }
+
+
 
 .right{
     float: right;
@@ -112,7 +124,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-right: 10px;
     /* margin: auto; */
-    padding: 8px 15px;
+    padding: 8px 25px;
     border-radius: 6px;
 }
 
@@ -146,5 +158,16 @@
 .button-container .question-btn:nth-child(3):hover{
     background-color:rgb(179, 20, 22);
 
+}
+
+.toast-valid{
+    background-color: #f44336;
+}
+
+.disable{
+    background-color: #ccc !important;
+    box-shadow: none !important;
+    opacity: 0.9 !important;
+    pointer-events: none;
 }
 

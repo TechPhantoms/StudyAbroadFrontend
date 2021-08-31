@@ -1,6 +1,8 @@
 import axios from 'axios';
-import React, { Component } from 'react';
+import React, { Component,  useState} from 'react';
 import { Link } from 'react-router-dom';
+import { Col } from 'react-bootstrap';
+
 import './universities.css'
 
 class Universities extends Component {
@@ -25,7 +27,20 @@ class Universities extends Component {
             })
     }
     render() {
+        
         return (
+            <>
+            {/* <div className='searchh'>
+            <Col lg={4} className="d-none d-md-none d-lg-block"></Col>
+                        <Col lg={4}>
+                            <div className="Search">
+                                <input type="text" placeholder="I am looking for....." onChange={(e) => {
+                                    setSearch(e.target.value);
+                                }} id="txtSearch" className="form-control" />
+                            </div>
+                        </Col>
+                        <Col lg={4} className="d-none d-md-none d-lg-block"></Col>
+            </div> */}
             <div className='universities-section'>
                  <p className= 'heading-text'>We will help you find your dream university</p>
                 <div className='universities'>{this.state.Universities.map((universities) => {
@@ -36,9 +51,9 @@ class Universities extends Component {
                                 <div className='universities-image'> 
                                     <img src={`http://localhost:90/${universities.universityImage}`}  />
                                 </div>
-                                <div className='university-name'>
+                                <div className='universities-name'>
                                         <h3>{universities.universityName}</h3>
-                                        <span>{universities.universityLocation}</span>
+                                        <span className='uni-location'>{universities.universityLocation}</span>
                                     </div>
                                 <div className='university-details'>
      
@@ -78,6 +93,8 @@ class Universities extends Component {
                     )
                 })}</div>
             </div>
+
+            </>
 
         )
     }

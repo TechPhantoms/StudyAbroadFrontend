@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './Header/header'
+import Header from './Header/header';
 import Home from './Body/Home/index';
 import Register from './Body/Register/Register';
 import Login from './Body/Login/Login';
@@ -22,13 +22,18 @@ import Listening from './Body/MockTest/Listening/listening';
 import Writing from './Body/MockTest/Writing/writing';
 import InstructionPage from './Body/MockTest/InstructionsPage/instructionpage';
 import ReadingTest from './Body/MockTest/Reading/test';
+import Reset from './Body/ResetPassword/reset';
+import LoginGoogle from './Body/Login/googleLogin/googlelogin'
+import QuizSummary from './Body/MockTest/Reading/quizSummary';
+import Mailer from './Body/Mailer/mailer';
+import UserProfile from './Body/UserProfile/userprofile';
 import {BrowserRouter as Router, Switch ,Route} from 'react-router-dom'
 
 
 function App() {
   return (
     <Router>
-      <Header />
+      <Header/>
       <Switch>
         <Route path = '/' exact component = {Home}/>
         <Route path = '/login' component = {Login}/>
@@ -49,6 +54,15 @@ function App() {
         <Route path = '/speaking/test' component={Speaking}/>
         <Route path = '/instruction/page' component={InstructionPage}/>
         <Route path = '/test/reading' component={ReadingTest} />
+        <Route path = '/quizSummary' component={QuizSummary}/>
+        <Route path = '/reset' component={Reset}/>
+        <Route path ='./googlelogin' component={LoginGoogle}/>
+        <Route path ='/book/counseling' component={Mailer}/>
+        <Route path ='/user/profile' component={UserProfile}/>
+
+
+
+        
 
         {/* <Route path ='/login/register' component={LoginRegister}/> */}
 

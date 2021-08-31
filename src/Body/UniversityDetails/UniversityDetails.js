@@ -1,6 +1,11 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import './UniversityDetails.css'
+import images from  './uniimg.jpg'
+import image1 from './universitydetail.png'
+import image2 from './whystudy.png'
+import image3 from './fund.png'
+
 
 class UniversityDetails extends Component {
 
@@ -12,8 +17,7 @@ class UniversityDetails extends Component {
         id: this.props.match.params.id,
         comment: '',
         commentReply: '',
-        Comments: [],
-        university: []
+        comments : []
     }
 
     componentDidMount() {
@@ -21,35 +25,23 @@ class UniversityDetails extends Component {
             .then(response => {
                 console.log(response)
                 this.setState({
-                    UniversityInfo: response.data,
-                    university: response.data
+                    UniversityInfo: response.data
                 })
             })
             .catch((err) => {
                 console.log(err.response)
             })
-
-        axios.get("http://localhost:90/comment/showall")
-            .then((response) => {
+        
+            axios.get("http://localhost:90/comment/showall")
+            .then((response)=>{
                 console.log(response)
-                this.setState({
-                    Comments: response.data.data
-                })
+               this.setState({
+                   comments : response.data.data
+               })
             })
-            .catch((err) => {
+            .catch((err)=>{
                 console.log(err);
             })
-
-        // axios.get("http://localhost:90/universities/showall")
-        // .then((response)=>{
-        //     console.log(response)
-        //     this.setState({
-        //         university :response.data
-        //     })
-        // })
-        // .catch((err) => {
-        //     console.log(err.response)
-        // })
     }
 
     inputHandler = (e) => {
@@ -60,7 +52,7 @@ class UniversityDetails extends Component {
 
     PostComment = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:90/insert/comment', this.state, this.state.config)
+        axios.post('http://localhost:90/insert/comment', this.state,this.state.config)
             .then((response) => {
                 console.log(response)
                 // localStorage.setItem('token', response.data.token)
@@ -79,14 +71,14 @@ class UniversityDetails extends Component {
                     <div className='university-image'>
                         <img src={`http://localhost:90/${this.state.UniversityInfo.universityImage}`} />
                     </div>
-                    <div classname='university-name'>
+                    <div className='university-names'>
                         <h1>{this.state.UniversityInfo.universityName}</h1>
                         <p>Check whether {this.state.UniversityInfo.universityName} is right for you as an</p>
                         <p>intertnational student.</p>
                         <button className='university-website-btn'>Official university website</button>
                     </div>
                     <div className='university-box'>
-                        <div className='universities-name'>
+                        <div className='universities-named'>
                             <h3>{this.state.UniversityInfo.universityName}</h3>
                             <span>{this.state.UniversityInfo.universityLocation}</span>
                         </div>
@@ -121,12 +113,14 @@ class UniversityDetails extends Component {
                         </div>
                     </div>
                     <div className='studyAbroad'>
+                    <img src={images} />
                         <h1>Study abroad at {this.state.UniversityInfo.universityName}</h1>
                         <p>{this.state.UniversityInfo.studyAbroadPara1}</p>
                         <p>{this.state.UniversityInfo.studyAbroadPara2}</p>
                         <p>{this.state.UniversityInfo.studyAbroadPara3}</p>
                     </div>
                     <div className='whyStudy'>
+                    <img src={image1} />
                         <h1>Why study as {this.state.UniversityInfo.universityName}?</h1>
                         <div className='whyStudy-title'>
                             <h3>{this.state.UniversityInfo.whyStudyTitle1}</h3>
@@ -137,6 +131,7 @@ class UniversityDetails extends Component {
                             <p>{this.state.UniversityInfo.whyStudyPara2}</p>
                         </div>
                         <div className='whyStudy-title'>
+                        <img src={image2} />
                             <h3>{this.state.UniversityInfo.whyStudyTitle3}</h3>
                             <p>{this.state.UniversityInfo.whyStudyPara3}</p>
                         </div>
@@ -150,6 +145,7 @@ class UniversityDetails extends Component {
                         </div>
                     </div>
                     <div className='internationalStudents'>
+                    <img src={image3} />
                         <h1>Life as an international student</h1>
                         <p>{this.state.UniversityInfo.internationalLifePara1}</p>
                         <p>{this.state.UniversityInfo.internationalLifePara2}</p>
@@ -176,10 +172,10 @@ class UniversityDetails extends Component {
                                 <p>{this.state.UniversityInfo.undergraduatefundingAmount}</p>
 
 
-                                {this.state.UniversityInfo.undergraduatefunding1}
-                                {this.state.UniversityInfo.undergraduatefunding2}
-                                {this.state.UniversityInfo.undergraduatefunding3}
-                                {this.state.UniversityInfo.undergraduatefunding4}
+                               <p>{this.state.UniversityInfo.undergraduatefunding1}</p>
+                                <p>{this.state.UniversityInfo.undergraduatefunding2}</p>
+                                <p>{this.state.UniversityInfo.undergraduatefunding3}</p>
+                                <p>{this.state.UniversityInfo.undergraduatefunding4}</p>
 
                             </div>
 
@@ -189,8 +185,8 @@ class UniversityDetails extends Component {
                                 <p>{this.state.UniversityInfo.postgraduateAmount}</p>
 
 
-                                {this.state.UniversityInfo.postgraduateFunding1}
-                                {this.state.UniversityInfo.postgraduateFunding2}
+                               <p>{this.state.UniversityInfo.postgraduateFunding1}</p> 
+                               <p> {this.state.UniversityInfo.postgraduateFunding2}</p>
 
                             </div>
                         </div>
@@ -207,18 +203,18 @@ class UniversityDetails extends Component {
                         <p>{this.state.UniversityInfo.locationStreetDetails}</p>
                     </div>
 
+                </div>
 
-                    <div className='comment' >
-                    <h1>Post a comment</h1>
-                    <input type='text' name='comment' placeholder='add a comment' value={this.state.comment} onChange={this.inputHandler} />
+                <div className='comment'>
+                        <h1>Post a comment</h1>
+                    <input type='text' name='username' placeholder='Username' value={this.state.username} onChange={this.inputHandler} />
 
-                    <button onClick={this.PostComment} className='comment-post'>Submit</button>
+                </div>
 
-
-                    {
-                    this.state.Comments.length > 0 &&
+                {
+                    this.state.comments.length > 0 &&
                     (
-                        this.state.Comments.map((val)=>{
+                        this.state.comments.map((val)=>{
                             return(
                                 <>
                                     <p> {val.comment}  </p>
@@ -228,26 +224,13 @@ class UniversityDetails extends Component {
                     )
                 }
 
-                </div>
-
-                </div>
-
-            
-                {/* <div className='user-feedback'>
-                    <h1>Post a comment</h1>
-                 
-                    <div className='comment'>{this.state.Comments.map((comments) => {
-                        return (
-                            
-                                <p>{comments.comment}</p>
-                        )
-                    })}</div>
-                </div> */}
-
-
             </div>
+
+
+            // <h1>UniversityDetails</h1>
         )
     }
 }
+
 
 export default UniversityDetails

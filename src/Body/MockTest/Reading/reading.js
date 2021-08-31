@@ -5,7 +5,7 @@ class Reading extends Component{
     render(){
         return(
             <div className='Reading-section'>
-                <h1>Reading Test Section</h1>
+                {/* <h1>Reading Test Section</h1> */}
                 <div className='instructions'>
                     <h2>How to take a Test</h2>
                     <p>Ensure you read this guide from start to finish.</p>

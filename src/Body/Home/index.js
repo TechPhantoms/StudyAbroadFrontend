@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 // import React, { Component, Button } from 'react'
 import News from '../NewsandPolicy/news'
 import { Button,Form,FormControl } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 
 import './index.css'
 
@@ -14,9 +15,7 @@ class Home extends Component {
                     <p>We will help you to find, apply & enroll at universities abroad</p>
 
                     <div className='home-btns'>
-                        {/* <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large'>
-                   <h1>CHECK HERE</h1>
-                </Button> */}
+                    
                         <Form className="d-flex">
                             <FormControl
                                 type="search"
@@ -29,9 +28,14 @@ class Home extends Component {
                     </div>
                 </div>
                 <News />
+                    <div className='mailer-section'>
+                        <button><Link to='/book/counseling'>Book Counseling</Link></button>
+                    </div>
             </>
         )
     }
 }
+
+  
 
 export default Home

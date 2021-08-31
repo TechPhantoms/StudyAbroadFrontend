@@ -32,25 +32,13 @@ class Countries extends Component {
     render() {
         return (
             // <Container>
-            <Row>
-                <div className='countries-section'>
-                    <div className='countries'>{this.state.Countries.map((countries) => {
-                        return (
-                            // <div className="country" key={countries._id}>
-                            //     <Link to={`/countries/showall/${countries._id}`}>
-                            //         <img src ={`http://localhost:90/${countries.countryImage}`}  className ='countries-img'/>
-                            //     </Link>
-                            //     <div>
-                            //         {countries.countryName}
-                            //     </div>
-                            //     <button className='Book-btn'>
-                            //                 <Link to={"/countriessssss/" + countries._id } className="Book-btn1">
-                            //                     View
-                            //             </Link>
-                            //     </button>
-                            // </div>
-                            <div className='card'>
-                                 <div className='box'>
+            // <Row>
+            <div className='countries-section'>
+                <div className='countries'>{this.state.Countries.map((countries) => {
+                    return (
+
+                        <div className='cardd-box'>
+                            <div className='box'>
                                 <div className='imgbox'>
                                     <img src={`http://localhost:90/${countries.countryImage}`} className='countries-img' />
                                 </div>
@@ -62,13 +50,13 @@ class Countries extends Component {
                                     </Link>
                                 </button>
                             </div>
-                            </div>
+                        </div>
 
-                           
-                        )
-                    })}</div>
-                </div>
-            </Row>
+
+                    )
+                })}</div>
+            </div>
+            // </Row>
             // </Container>
 
         )
