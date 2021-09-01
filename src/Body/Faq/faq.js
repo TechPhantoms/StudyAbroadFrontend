@@ -11,31 +11,36 @@ function AppFaq() {
       <div className="container-fluid">
         <div className="titleHolder">
           <h2>Frequently Asked Questions</h2>
-          <p>Quidem reiciendis iure, aperiam blanditiis. Alias esse, nam, ea quam</p>
+          <p>Study Abroad FAQ </p>
         </div>
         <Collapse defaultActiveKey={['1']}>
-          <Panel header="How to setup the theme?" key="1">
-            <p>Ut per tempor latine fuisset, cu quod posidonium vix. Mei cu erant bonorum, te ius vide maiorum hendrerit. In alii instructior vix, vis et elit maluisset, usu recusabo atomorum ut. Nibh diceret dolores vix et, id omnis adhuc maiestatis vim, ei mel legendos mnesarchum argumentum. Semper nusquam urbanitas sea te.</p>
+          <Panel header="Why should I study abroad?" key="1">
+            <p>By studying abroad, you’ll problem solve, develop a deeper global outlook and tolerance for ambiguity, and collaborate with people with diverse backgrounds – paramount for today’s graduates. You’ll earn credit towards your degree while having a unique experience in a foreign culture</p>
           </Panel>
-          <Panel header="Can I change plan or cancel at any time?" key="2">
-            <p>Postea ceteros corrumpit ius te, eos epicuri intellegebat consequuntur et. Sint quot suscipiantur ea nam. Nam pericula evertitur ut, per et quod nostro, autem augue id has. Virtute epicurei quo te, pri et novum essent senserit.</p>
+          <Panel header="What type of study abroad programs are available?" key="2">
+            <p>The Office of Study Abroad offers a number of program options ranging from one week to a full academic year. The types of EMU-approved programs available are; Faculty-Led, Exchange, and Partner provider programs. </p>
           </Panel>
-          <Panel header="How to access through cloud?" key="3">
-            <p>Eu veritus ancillae suavitate per, cum in appellantur efficiantur. Eum cu clita ponderum lobortis, usu dicat exerci et, eam alii oblique interesset ea. Suas quidam volumus id eam, id populo euripidis temporibus pri. At eum quas putent iriure, fugit tritani sed ad. Per ad magna possim aliquam, est aeque exerci verear an, qui cu modus audire detraxit. Duo ne nostro rationibus, nam mutat omittam evertitur ad, meliore gubergren voluptatum at mel.</p>
+          <Panel header="How do I know what study abroad program is right for me?" key="3">
+            <p>Spend some time thinking about your goals before you begin your search.
+
+    Think about why you are studying abroad and how your program will align with what you hope to achieve both personally and academically. Think about what skills you might gain in an International experience.
+    Consider how long you would like to be abroad (one week, four weeks, a year?)
+    Consider your finances realistically. Have you looked through the program costs and done a budgeting plan for your program?</p>
           </Panel>
-          <Panel header="Can I manage multiple task?" key="4">
-            <p>Mentitum offendit appareat nam ex, mea timeam nonumes pertinacia ne. Autem altera an vix, cu soluta aliquid pro, ne sit natum neglegentur. Ea ridens iudicabit eam, in dico appetere mediocrem nec. Sea idque consetetur no. Sonet minimum ex eam, vis an semper consequuntur definitionem. Vel legimus nostrum hendrerit eu, ea velit facete nec.</p>
+          <Panel header="When can I study abroad? Can I only study abroad once?" key="4">
+            <p>Determining when the best time for you to study abroad largely depends on your current major, the type of program you are interest in, and what year you are. Most programs are open to students who have completed a semester at EMU and are in good standing. Some programs will have additional requirements to consider. Transfer students should speak with an APA advisor to determine their eligibility status.</p>
           </Panel>
-          <Panel header="How can I change my password?" key="5">
-            <p>Usu dolorem ceteros te. Veri exerci ne vix, modo ignota an qui. Ne oblique antiopam quo. Ex quem saepe cum, temporibus comprehensam qui at. Aliquip habemus fierent qui at. No facete omnesque argumentum sea, est tale error nihil ad.</p>
+          <Panel header="I haven’t studied a foreign language. Can I still study abroad?" key="5">
+            <p>Coursework in English is available on almost every EMU sponsored programs. Most programs do not require any prior host country language experience.</p>
           </Panel>
-          <Panel header="How to manage my account?" key="6">
-            <p>Erant vitae alterum in mel, viris rationibus argumentum eu sea. Per ei diceret constituto, ei qui simul intellegam, ut eos dolor ceteros. Altera contentiones et eam. Discere alienum intellegat te duo. Erat dissentiet ei sed, eius dicat ne eum. Id tation everti nam, quo cu magna possit patrioque.</p>
+          <Panel header="Can students with only certain majors study abroad?" key="6">
+            <p>No. All majors can study abroad especially when planning ahead. Credits are offered for general education and elective credits, or for majors or minors. During the planning process, make sure to speak with both a Study Abroad advisor and Academic advisor to determine which program will best meet your academic and professional needs.</p>
           </Panel>
         </Collapse>
         <div className="quickSupport">
           <h3>Want quick support?</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur velit necessitatibus praesentium aliquid eos in neque recusandae, incidunt esse dolore voluptatum nesciunt quod soluta consequuntur voluptatibus ab excepturi nobis! Porro!</p>
+          <p>
+Book an appointment now and our counsellors will contact you at the time that best suits your schedule. You can discuss with them your study options and find the best country, university and course that fits your needs, and also assist you with your application submissions - all online! Book your online counselling session now!</p>
           <Button type="primary" size="large"><i className="fas fa-envelope"></i> Email your question</Button>
         </div>
         

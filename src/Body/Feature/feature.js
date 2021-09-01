@@ -1,11 +1,12 @@
 import React from 'react';
 
-import image1 from './modern-design.jpg';
-import image2 from './clean-design.jpg';
-import image3 from './great-support.jpg';
-import image4 from './easy-customise.jpg';
-import image5 from './unlimited-features.jpg';
-import image6 from './advanced-option.jpg';
+import image1 from './akash.jpg';
+import image2 from './amrit.webp';
+import image3 from './bipin.png';
+import image4 from './bishal.webp';
+import image5 from './praj.jpg';
+import image6 from './sirish.jpg';
+import './feature.css'
 
 import { Row, Col } from 'antd';
 import { Card } from 'antd';
@@ -16,7 +17,7 @@ function AppFeature() {
     <div id="feature" className="block featureBlock bgGray">
       <div className="container-fluid">
         <div className="titleHolder">
-          <h2>Key Features and Benefits</h2>
+          <h2>Our Team</h2>
           <p>Obcaecati consequatur libero repudiandae, aperiam itaque laborum!</p>
         </div>
         <Row gutter={[16, 16]}>
