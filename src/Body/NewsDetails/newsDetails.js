@@ -1,6 +1,7 @@
 import { Component } from "react";
 import axios from 'axios'
 import './NewsDetails.css'
+import images from  './uniimg.jpg'
 // import { Row } from "react-bootstrap";
 
 class NewsDetails extends Component {
@@ -29,17 +30,35 @@ class NewsDetails extends Component {
         return (
             <div className='news-details-section'>
                 <div className='news-info' key={this.state.NewsInfo._id}>
+                      <div className='News-image'>
                     <img src={`http://localhost:90/${this.state.NewsInfo.Newsimage}`} />
+                </div>
                 </div>
                 <div className='news-title'>
                     <h1>{this.state.NewsInfo.NewsTitle}</h1>
                 </div>
                 <div className='news-details'>
-                    {/* <ul>
-                        <li> */}
-                            {this.state.NewsInfo.NewsDetails}
-                        {/* </li>
-                    </ul> */}
+               
+
+                   <p>{this.state.NewsInfo.NewsDetails}</p>
+                            
+                    
+                </div>
+                 <div className='news-details'>
+                    
+                   <p>{this.state.NewsInfo.Why}</p>  
+                </div>
+                <div className='news-details'>
+                     
+                   <p>{this.state.NewsInfo.Why}</p>  
+                </div>
+                <div className='news-details'>
+                     
+                   <p>{this.state.NewsInfo.Why}</p>  
+                </div>
+                <div className='news-details'>
+                     
+                   <p>{this.state.NewsInfo.Why}</p>  
                 </div>
             </div>
         )

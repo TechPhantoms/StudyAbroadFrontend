@@ -32,7 +32,7 @@ class Login extends Component {
     }
     render() {
         if (localStorage.getItem('token')) {
-            return <Redirect to="/home" />
+            return <Redirect to="/" />
         }
         return (
             // <div className = 'login-box'>
@@ -60,12 +60,12 @@ class Login extends Component {
                             <h2 className='title'>Sign In</h2>
                             <div className='input-field'>
                                 <i class="fas fa-user"></i>
-                                <input type='text' name='username' placeholder='Username' value={this.state.username} onChange={this.inputHandler} />
+                                <input type='text' name='username' placeholder='Username' value={this.state.username} onChange={this.inputHandler} required />
                             </div>
 
                             <div className='input-field'>
                                 <i class="fas fa-lock"></i>
-                                <input type='password' name='password' placeholder='Password' value={this.state.password} onChange={this.inputHandler} />
+                                <input type='password' name='password' placeholder='Password' value={this.state.password} onChange={this.inputHandler} required />
                             </div>
 
                             <button onClick={this.submitLogin} className='btn solid'>Sign In</button>

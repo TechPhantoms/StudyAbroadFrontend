@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import 'antd/dist/antd.css';
 import Header from './Header/header'
 import Home from './Body/Home/index';
 import Register from './Body/Register/Register';
@@ -23,12 +23,13 @@ import Writing from './Body/MockTest/Writing/writing';
 import InstructionPage from './Body/MockTest/InstructionsPage/instructionpage';
 import ReadingTest from './Body/MockTest/Reading/test';
 import {BrowserRouter as Router, Switch ,Route} from 'react-router-dom'
-
+import UserProfile from './Body/UserProfile/UserProfile';
 
 function App() {
   return (
     <Router>
-      <Header />
+       <Header />
+      
       <Switch>
         <Route path = '/' exact component = {Home}/>
         <Route path = '/login' component = {Login}/>
@@ -49,6 +50,8 @@ function App() {
         <Route path = '/speaking/test' component={Speaking}/>
         <Route path = '/instruction/page' component={InstructionPage}/>
         <Route path = '/test/reading' component={ReadingTest} />
+         <Route path = '/UserProfile' component={UserProfile} />
+
 
         {/* <Route path ='/login/register' component={LoginRegister}/> */}
 

@@ -8,6 +8,7 @@ class AddNews extends Component{
         Newsimage:'',
         NewsTitle:'',
         NewsDetails:'',
+        Why:'',
         config:{
             'authorization' : `Bearer${localStorage.getItem('token')}`
         }
@@ -32,6 +33,7 @@ class AddNews extends Component{
         data.append('Newsimage', this.state.Newsimage)
         data.append('NewsTitle', this.state.NewsTitle)
         data.append('NewsDetails', this.state.NewsDetails)
+        data.append('Why', this.state.Why)
 
         console.log(data)
 
@@ -62,6 +64,10 @@ class AddNews extends Component{
                    <div className='newstext-box'>
                        <label for= 'NewsDetails'><b>News Details</b></label>
                        <input type = 'text' name='NewsDetails' onChange={this.changeHandler}/>
+                   </div>
+                    <div className='newstext-box'>
+                       <label for= 'Why'><b>Why?</b></label>
+                       <input type = 'text' name='Why' onChange={this.changeHandler}/>
                    </div>
 
                    <button onClick={this.submitData} className='news-button'>

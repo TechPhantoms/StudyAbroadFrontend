@@ -11,7 +11,7 @@ input {
   font-family: "Poppins", sans-serif;
 }
 
-.container {
+.containers {
   position: relative;
   width: 100%;
   background-color: #fff;
@@ -160,7 +160,7 @@ form.sign-in-form {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.container:before {
+.containers:before {
   content: "";
   position: absolute;
   height: 2000px;

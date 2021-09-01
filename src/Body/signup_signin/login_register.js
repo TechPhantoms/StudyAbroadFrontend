@@ -16,25 +16,25 @@ class LoginRegister extends Component {
 
 
     //register
-    submitUser = (e) => {
-        e.preventDefault();
-        const userdata = {
-            firstname: this.state.firstname,
-            lastname: this.state.lastname,
-            email: this.state.email,
-            phone: this.state.phone,
-            username: this.state.username,
-            password: this.state.password
-        }
-        axios.post("http://localhost:90/register", userdata)
-            .then((response) => {
-                console.log(response)
-                this.props.history.push('/login')
-            })
-            .catch((err) => {
-                console.log(err.response)
-            })
-    }
+    // submitUser = (e) => {
+    //     e.preventDefault();
+    //     const userdata = {
+    //         firstname: this.state.firstname,
+    //         lastname: this.state.lastname,
+    //         email: this.state.email,
+    //         phone: this.state.phone,
+    //         username: this.state.username,
+    //         password: this.state.password
+    //     }
+    //     axios.post("http://localhost:90/register", userdata)
+    //         .then((response) => {
+    //             console.log(response)
+    //             this.props.history.push('/login')
+    //         })
+    //         .catch((err) => {
+    //             console.log(err.response)
+    //         })
+    // }
 
     //login
 
@@ -68,7 +68,7 @@ render() {
     }
 
     return (
-        <div className='container'>
+        <div className='containers'>
             <div className='form-container'>
                 <div class="signin-signup">
                     {/* for login */}
@@ -105,7 +105,7 @@ render() {
 
                     {/* for register */}
 
-                    <form className='sign-up-form'>
+                    {/* <form className='sign-up-form'>
                         <h2 className='title'>Sign Up</h2>
                         <div className='input-field'>
                             <i class="fas fa-user"></i>
@@ -150,12 +150,12 @@ render() {
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
                         </div>
-                    </form>
+                    </form> */}
                 </div>
             </div>
 
 
-            <div class="panels-container">
+            {/* <div class="panels-container">
                 <div class="panel left-panel">
                     <div class="content">
                         <h3>New here ?</h3>
@@ -168,9 +168,9 @@ render() {
                         </button>
                     </div>
                     <img src={images} classname="login-image" alt="" />
-                </div>
+                </div> */}
 
-                <div class="panel right-panel">
+                {/* <div class="panel right-panel">
                     <div class="content">
                         <h3>One of us ?</h3>
                         <p>
@@ -182,9 +182,9 @@ render() {
                         </button>
                     </div>
                     <img src="img/register.svg" class="image" alt="" />
-                </div>
+                </div> */}
             </div>
-        </div>
+       
     )
 }
 }
