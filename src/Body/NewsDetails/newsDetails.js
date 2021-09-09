@@ -35,11 +35,21 @@ class NewsDetails extends Component {
                     <h1>{this.state.NewsInfo.NewsTitle}</h1>
                 </div>
                 <div className='news-details'>
-                    {/* <ul>
-                        <li> */}
-                            {this.state.NewsInfo.NewsDetails}
-                        {/* </li>
-                    </ul> */}
+                 
+                            <p>{this.state.NewsInfo.NewsDetails} </p>
+                            <h1>{this.state.NewsInfo.title1}</h1>
+                            <p>{this.state.NewsInfo.content1} </p>
+
+                            <h1>{this.state.NewsInfo.title2}</h1>
+                            <p>{this.state.NewsInfo.content2} </p>
+
+                            <h1>{this.state.NewsInfo.title3}</h1>
+                            <p>{this.state.NewsInfo.content3} </p>
+
+                            <h1>{this.state.NewsInfo.title4}</h1>
+                            <p>{this.state.NewsInfo.content4} </p>
+
+                   
                 </div>
             </div>
         )

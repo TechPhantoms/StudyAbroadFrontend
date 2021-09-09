@@ -2,7 +2,9 @@ import { Component } from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
 import './login.css'
+import { Link } from 'react-router-dom'
 import images from '../../images/img.png'
+import GoogleLogin from "./googleLogin/googlelogin";
 
 class Login extends Component {
     state = {
@@ -32,7 +34,7 @@ class Login extends Component {
     }
     render() {
         if (localStorage.getItem('token')) {
-            return <Redirect to="/home" />
+            return <Redirect to="/" />
         }
         return (
             // <div className = 'login-box'>
@@ -53,7 +55,7 @@ class Login extends Component {
             //     </form>
             // </div>
 
-            <div className='container'>
+            <div className='containerr'>
                 <div className='form-container'>
                     <div class="signin-signup">
                         <form className='sign-in-form'>
@@ -93,12 +95,15 @@ class Login extends Component {
                         <div class="content">
                             <h3>New here ?</h3>
                             <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-                                ex ratione. Aliquid!
+                               If your are new here then sign up
                             </p>
-                            <button class="btn transparent" id="sign-up-btn">
-                                Sign up
+                            <button class="btn-transparent" id="sign-up-btn">
+                                <Link to= '/register' className='signup-link'>Sign up</Link>
+                                
                             </button>
+                        </div>
+                        <div className='login-img'>
+                            <img src={images}/>
                         </div>
                        
 
@@ -110,6 +115,9 @@ class Login extends Component {
 
 
 
+            </div>
+            <div className='g-signin'>
+                <GoogleLogin/>
             </div>
             </div>
             

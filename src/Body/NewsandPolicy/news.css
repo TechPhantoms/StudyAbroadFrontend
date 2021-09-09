@@ -62,6 +62,7 @@ body{
     margin-bottom: 15px;
    font-family: Roboto;
    margin-top: 20px;
+   font-size: 30px;
 }
 
 .news{
@@ -111,11 +112,24 @@ body{
     margin: 10px 0;
     width: 320px;
 }
+/* .title{
+    font-size: 25px;
+} */
 
+.content h1{
+    font-size: 15px;
+    text-align: center;
+    margin-right: 14%;
+}
+
+.content h3{
+    text-align: center;
+    /* margin-right: 20%; */
+}
 .news-container p{
     margin: 10px 0;
     font-size: 15px;
-    padding: 5px 10px;
+    padding: 5px 7px;
     border: none;
     width: 320px;
     height: 200px;
@@ -139,4 +153,8 @@ body{
 
 .content a:hover{
     text-decoration: underline;
+}
+
+.newss{
+    text-align: center;
 }
