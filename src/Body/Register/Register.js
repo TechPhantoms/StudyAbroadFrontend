@@ -3,6 +3,7 @@ import axios from 'axios'
 import './register.css'
 import images from '../../images/img.png'
 import { Link } from 'react-router-dom'
+import {toast} from 'react-toastify'
 
 // import '../Login/login.css'
 
@@ -15,7 +16,8 @@ class Register extends Component {
         email: "",
         phone: "",
         username: "",
-        password: ""
+        password: "",
+        error:""
     };
 
     submitUser = (e) => {
@@ -31,7 +33,19 @@ class Register extends Component {
         axios.post("http://localhost:90/register", userdata)
             .then((response) => {
                 console.log(response)
-                this.props.history.push('/login')
+                if(response.data.success == true)
+                {
+                    toast.success(response.data.message)
+                    this.props.history.push('/login')
+                }
+                else
+                {
+                    this.setState({
+                        "error":response.data.message
+                    })
+                    toast.error(response.data.message)
+                }
+              
             })
             .catch((err) => {
                 console.log(err.response)
@@ -130,6 +144,7 @@ class Register extends Component {
                     <i class="fas fa-lock"></i>
                     <input type="password" value = {this.state.password} onChange= {(event => {this.setState({password: event.target.value})})} placeholder='Password'/>
                     </div>
+                    {this.state.error && (<p style={{color:"red"}}> *{this.state.error} </p>)}
                             <button onClick={this.submitUser} className='btn solid'>Sign Up</button>
 
                             <p class="social-text">Or Sign up with social platforms</p>
@@ -147,6 +162,7 @@ class Register extends Component {
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
                             </div>
+                            
                         </form>
                     </div>
                 </div>

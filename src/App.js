@@ -27,11 +27,29 @@ import LoginGoogle from './Body/Login/googleLogin/googlelogin'
 import QuizSummary from './Body/MockTest/Reading/quizSummary';
 import Mailer from './Body/Mailer/mailer';
 import UserProfile from './Body/UserProfile/userprofile';
+import WishList from './Body/Wishlist/wishList';
+import FAQ from './Body/FAQ/faq'
+// import AboutUs from './Body/AboutUs/AboutUs';
 import {BrowserRouter as Router, Switch ,Route} from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
+
+// CHATRA
+(function (d, w, c) {
+  w.ChatraID = 'BxdpcQGaebZdaFXuc';
+  var s = d.createElement('script');
+  w[c] = w[c] || function () {
+    (w[c].q = w[c].q || []).push(arguments);
+  };
+  s.async = true;
+  s.src = 'https://call.chatra.io/chatra.js';
+  if (d.head) d.head.appendChild(s);
+})(document, window, 'Chatra');
 
 function App() {
   return (
+    <>
     <Router>
       <Header/>
       <Switch>
@@ -56,19 +74,22 @@ function App() {
         <Route path = '/test/reading' component={ReadingTest} />
         <Route path = '/quizSummary' component={QuizSummary}/>
         <Route path = '/reset' component={Reset}/>
-        <Route path ='./googlelogin' component={LoginGoogle}/>
+        <Route path ='/googlelogin' component={LoginGoogle}/>
         <Route path ='/book/counseling' component={Mailer}/>
         <Route path ='/user/profile' component={UserProfile}/>
+        <Route path ='/wishlist' component={WishList}/>
+        <Route path ='/faq' component={FAQ}/>
 
 
-
-        
 
         {/* <Route path ='/login/register' component={LoginRegister}/> */}
 
       </Switch>
       <Footer/>
+      <ToastContainer />
     </Router>
+    
+     </>
   )
 
 

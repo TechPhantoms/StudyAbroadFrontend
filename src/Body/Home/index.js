@@ -1,8 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect, useState } from 'react'
+import axios from 'axios';
 // import React, { Component, Button } from 'react'
 import News from '../NewsandPolicy/news'
-import { Button,Form,FormControl } from 'react-bootstrap';
+import FAQ from '../FAQ/faq'
+import AboutUs from '../AboutUs/AboutUs'
+import Feature from '../Feature/feature'
+import Works from '../Works/works'
+// import { Button,Form,FormControl, Col} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
+import { Button } from 'antd';
+
 
 import './index.css'
 
@@ -10,7 +17,7 @@ class Home extends Component {
     render() {
         return (
             <>
-                <div className='home-container'>
+                {/* <div className='home-container'>
                     <h1>Discover. Research. Decide.</h1>
                     <p>We will help you to find, apply & enroll at universities abroad</p>
 
@@ -26,8 +33,33 @@ class Home extends Component {
                             <Button className='search-btn'>SEARCH</Button>
                         </Form>
                     </div>
+                </div> */}
+
+<div className='home-container'>
+                    <div className="homediv">
+                    <h1>Discover. Research. Decide.</h1>
+                    <p>We will help you to find, apply & enroll at universities abroad</p>
+
+                    <div className='home-btns'>
+                        {/* <Form className="d-flex">
+                            
+                            <Button className='search-btn'>SEARCH</Button>
+                        </Form> */}
+                         <div className="btnHolder">
+                  <Button type="primary" size="large"><Link to='/Universities'>Find a University</Link></Button>
+                 
                 </div>
-                <News />
+                </div>
+                    </div>
+
+                    
+                </div>
+                <AboutUs />
+                <FAQ />
+                <Feature />
+                <Works />
+
+
                     <div className='mailer-section'>
                         <button><Link to='/book/counseling'>Book Counseling</Link></button>
                     </div>
@@ -39,3 +71,4 @@ class Home extends Component {
   
 
 export default Home
+

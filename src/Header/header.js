@@ -115,7 +115,7 @@ function Header(){
 
         window.addEventListener('resize', showButton);
         const token = localStorage.getItem('token')
-        // const type = localStorage.getItem('type')
+        const type = localStorage.getItem('type')
         return (
             <>
                 <nav className="navbar">
@@ -157,8 +157,19 @@ function Header(){
                                     News&policy
                                 </Link>
                             </li>
-
-
+                            {
+                                token&&
+                                (
+                                    (type!=="Admin")?
+                                    <li className='nav-item'>
+                                        <Link to='/wishlist' className= 'nav-links' onClick={closeMobileMenu}>
+                                            WishList
+                                        </Link>
+                                    </li>:<></>
+                                )
+                            }
+                           
+                        
                             {token ? <>
                                 <li className="nav-item">
                                     <Link to='/' className='nav-links' onClick={logout}>

@@ -1,3 +1,4 @@
+import './mailer.css'
 import emailjs from "emailjs-com";
 const Mailer = () => {
   function sendEmail(e) {
@@ -8,9 +9,9 @@ const Mailer = () => {
       "template_hhn8ftr",
       e.target,
       "user_l5A5Cs87Kw623lp31UkRo"
-    ).then(res=>{
-        console.log(res);
-    }).catch(err=> console.log(err));
+    ).then(res => {
+      console.log(res);
+    }).catch(err => console.log(err));
   }
   return (
     <div
@@ -23,7 +24,7 @@ const Mailer = () => {
         backgroundSize: "cover",
       }}
     >
-      <h1 style={{ marginTop: "25px" }}>BOOK COUNSELING</h1>
+      <h1 className='counseling' style={{ marginTop: "25px" }}>BOOK COUNSELING</h1>
       <form
         className="row"
         style={{ margin: "25px 85px 75px 100px" }}
@@ -36,7 +37,7 @@ const Mailer = () => {
         <input type="email" name="user_email" className="form-control" />
 
         <label>phone</label>
-        <input type="phone"  name="user_phone"  className="form-control"/>
+        <input type="phone" name="user_phone" className="form-control" />
 
         <label>Message</label>
         <textarea name="message" rows="4" className="form-control" />

@@ -3,6 +3,11 @@ import axios from 'axios'
 import { Row } from "react-bootstrap";
 import { Button } from 'react-bootstrap';
 import './CountriesDetails.css';
+import images from  './USA.png'
+import image1 from './qua.png'
+import image2 from './how.png'
+import image3 from './program.png'
+import image4 from './globe.png'
 
 class CountriesDetails extends Component{
     
@@ -96,25 +101,29 @@ class CountriesDetails extends Component{
                                 </div>
                                 <div className='contain'>
                                 <div className='why-study'>
-                                    <h1>Why study in {this.state.CountriesInfo.countryName}?</h1>
+                                <img src={images} />
+                                    <h1 className='countrytext'>Why study in {this.state.CountriesInfo.countryName}?</h1>
                                     <p>{this.state.CountriesInfo.whyStudy}</p>
                                     <Button>View university</Button>
                                 </div>
                                 <div className='best-programs'>
-                                    <h1>What are the best programs in the {this.state.CountriesInfo.countryName}?</h1>
+                                <img src={image1} />
+                                    <h1 className='countrytext'>What are the best programs in the {this.state.CountriesInfo.countryName}?</h1>
                                     <p>{this.state.CountriesInfo.programs}</p>
                                 </div>
                                 <div className='subjects'>
-                                    <h1>Popular subjects to study in {this.state.CountriesInfo.countryName}</h1>
+                                    <h1 className='countrytext'>Popular subjects to study in {this.state.CountriesInfo.countryName}</h1>
                                     <p>{this.state.CountriesInfo.subjects}</p>
                                 </div>
                                 <div className ='cost'>
-                                    <h1>What is the cost of studying in the {this.state.CountriesInfo.countryName}?</h1>
+                                <img src={image2} />
+                                    <h1 className='countrytext'>What is the cost of studying in the {this.state.CountriesInfo.countryName}?</h1>
                                     <p>{this.state.CountriesInfo.cost}</p>
                                 </div>
                                 <div className='requirements'>
-                                    <h1>What are the requirements to study in the {this.state.CountriesInfo.countryName}?</h1>
+                                    <h1 className='countrytext'>What are the requirements to study in the {this.state.CountriesInfo.countryName}?</h1>
                                     <div className='qualifications'>
+                                    <img src={image3} />
                                         <h3>Qualifications</h3>
                                         <p>{this.state.CountriesInfo.qualifications}</p>
                                     </div>
@@ -124,11 +133,12 @@ class CountriesDetails extends Component{
                                     </div>
                                 </div>
                                 <div className='studentVisa'>
-                                    <h1>{this.state.CountriesInfo.countryName} student visa</h1>
+                                <img src={image4} />
+                                    <h1 className='countrytext'>{this.state.CountriesInfo.countryName} student visa</h1>
                                     <p>{this.state.CountriesInfo.studentVisa}</p>
                                 </div>
                                 <div className='howStudy'>
-                                    <h1>How to study in {this.state.CountriesInfo.countryName}?</h1>
+                                    <h1 className='countrytext'>How to study in {this.state.CountriesInfo.countryName}?</h1>
                                     <p>{this.state.CountriesInfo.howStudy}</p>
                                 </div>
                                 </div>

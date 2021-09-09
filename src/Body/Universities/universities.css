@@ -28,10 +28,34 @@
 .universities-box{
     /* border: 1px solid blue; */
     width: 350px;
-    height: 550px;
+    height: 558px;
     box-shadow: 0 30px 30px rgba(0,0,0,10%);
     border-radius: 7px;
 }
+
+.heart-icon{
+    position: absolute;
+    border: 2px soild red;
+    /* top: 0;
+    left: 0; */
+}
+
+.fa-heart{
+    content: "\f004";
+    position: absolute;
+    top: -177px;
+    left: 310px;
+    font-size: 35px;
+    color: #f7f7f7;
+    opacity: 0.9;
+    transition: 0.3s linear all;
+
+}
+
+.fa-heart:hover{
+    color: rgb(238, 13, 13);
+}
+
 
 .universities h3{
     margin: 8px 16px;
@@ -106,4 +130,27 @@
 .details-button:hover{
     background-color: #191a1c;
     color: #ffff;
+}
+
+.search-section{
+    width: 20%;
+    margin: auto;
+    text-decoration: none;
+    border: none;
+}
+
+.Search imput{
+    font-size: 13px;
+}
+
+.sortdropdown .btn-secondary{
+    margin: 1% 83%;
+    background: #d8d2d2;
+    color: #34980b;
+    width: 8%;
+}
+
+.sortdropdown .btn-secondary:hover{
+    background-color: rgb(189, 189, 188);
+    color: blanchedalmond;
 }

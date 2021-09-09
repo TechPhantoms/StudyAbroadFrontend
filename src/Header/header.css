@@ -152,7 +152,7 @@ body{
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(7, auto);
+  grid-template-columns: repeat(8, auto);
   list-style: none;
   text-align: center;
   width: 60vw;
@@ -176,7 +176,7 @@ body{
   font-size: 15px;
   /* padding: 0px 3px; */
   height: 100%;
-  margin: 0px 3px;
+  margin: 0px 1px;
 }
 
 .nav-links:hover {

@@ -26,7 +26,6 @@ class Login extends Component {
             .then((response) => {
                 console.log(response)
                 localStorage.setItem('token', response.data.token)
-        
                 window.location.reload()
             })
             .catch((err) => {
@@ -35,7 +34,7 @@ class Login extends Component {
     }
     render() {
         if (localStorage.getItem('token')) {
-            return <Redirect to="/home" />
+            return <Redirect to="/" />
         }
         return (
             // <div className = 'login-box'>

@@ -79,7 +79,7 @@ class UniversityDetails extends Component {
                     </div>
                     <div className='university-box'>
                         <div className='universities-named'>
-                            <h3>{this.state.UniversityInfo.universityName}</h3>
+                            <h3>Uni Facts</h3>
                             <span>{this.state.UniversityInfo.universityLocation}</span>
                         </div>
                         <div className='universities-details'>
@@ -93,8 +93,8 @@ class UniversityDetails extends Component {
                                 <h3>{this.state.UniversityInfo.universityRank}</h3>
                             </div>
                             <div className='universities-info'>
-                                <p>International</p>
-                                <span className="universities-text">Students</span>
+                                <p>International Students</p>
+                                {/* <span className="universities-text">Students</span> */}
                                 <h3>{this.state.UniversityInfo.internationalStudents}</h3>
                             </div>
                             <div className='universities-info'>
@@ -131,7 +131,7 @@ class UniversityDetails extends Component {
                             <p>{this.state.UniversityInfo.whyStudyPara2}</p>
                         </div>
                         <div className='whyStudy-title'>
-                        <img src={image2} />
+                        {/* <img src={image2} /> */}
                             <h3>{this.state.UniversityInfo.whyStudyTitle3}</h3>
                             <p>{this.state.UniversityInfo.whyStudyPara3}</p>
                         </div>
@@ -207,8 +207,11 @@ class UniversityDetails extends Component {
 
                 <div className='comment'>
                         <h1>Post a comment</h1>
-                    <input type='text' name='username' placeholder='Username' value={this.state.username} onChange={this.inputHandler} />
+                        <div className='postt'>
 
+                    <input type='text' name='comment' placeholder='Comment' value={this.state.comment} onChange={this.inputHandler}  className='cmnt'/>
+                        <button onClick={this.PostComment} className='btn-post'>Post</button>
+                        </div>
                 </div>
 
                 {
@@ -217,7 +220,10 @@ class UniversityDetails extends Component {
                         this.state.comments.map((val)=>{
                             return(
                                 <>
-                                    <p> {val.comment}  </p>
+                                    <p className='user-comment'>{val.comment}  </p>
+                                    <div>
+                                        <p>{val.commentReply}</p>
+                                    </div>
                                 </>
                             )
                         })

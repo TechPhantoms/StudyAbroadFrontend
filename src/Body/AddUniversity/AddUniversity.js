@@ -156,7 +156,7 @@ class AddUniversity extends Component {
                         <input type='text' name='internationalStudents' onChange={this.changeHandler} />
                     </div>
                     <div className='add-text-box'>
-                        <label for='nationalities'><b>University Location</b></label>
+                        <label for='nationalities'><b>Nationalities</b></label>
                         <input type='text' name='nationalities' onChange={this.changeHandler} />
                     </div>
                     <div className='add-text-box'>

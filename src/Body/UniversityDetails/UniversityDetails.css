@@ -50,7 +50,7 @@
     margin-top:22px;
 }
 
-.university-box{
+/* .university-box{
     width: 30%;
     height: 15%;
     position: absolute;
@@ -60,116 +60,157 @@
     font-family: 'Amiri', serif;
     background-color: white;
     border-radius:27px ;
+} */
+
+.university-box{
+  width: 440px;
+  height: 371px;
+  box-shadow: 0 30px 30px rgb(0 0 0 / 10%);
+  border-radius: 7px;
+  position: absolute;
+  top: 125px;
+  left: 58%;
+  background-color: white;
+    
 }
 
 .university-box  .universities-named{
-    font-size: 24px;
+    /* font-size: 24px; */
     margin-left: 8%;
 }
 .universities-named h3{
-  font-size: 30px;
+  font-size: 24px;
+    margin: 9px -14px;
 }
 
 
 .universities-named span{
-  font-size: 20px;
+  font-size: 15px;
+  margin: 9px -14px;
 
+
+}
+
+.universities-details{
+     width: 410px;
+     display: grid;
+     grid-template-columns: auto auto;
+     margin: auto;
 }
 
 .university-box .universities-info{
-    margin-left: 8%;
-    margin-top: 3%;
-    font-family: 'Playfair Display', serif;
+  background-color: rgb(242 251 251);
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin: 4px 4px;
+    height: 86px;
+    width: 183px;
 
+}
+
+.universities-text{
+  margin: 7px 0;
+  font-size: 13px;
+  color: rgb(121, 117, 114);
 }
 
 .universities-info h3{
-    background-color: #5a5a72;
-    width: 100%;
-    margin-top: 0%;
-    font-size: 20px;
+  font-size: 13px;
+  margin-top: 15px;
 
+
+}
+
+.universities-info p{
+  font-size: 13px;
+  color: rgb(121, 117, 114);
 }
 
 .studyAbroad img {
-    width: 31%;
-    height: 78vh;
-    display: flex;
-    object-fit: contain;
-    filter: grayscale(8%);
-    position: absolute;
-    margin:-3% 66%;
+  width: 24%;
+  height: 60vh;
+  display: flex;
+  object-fit: contain;
+  filter: grayscale(8%);
+  position: absolute;
+  margin: -4% 68%;
   }
 
+ 
+
+
   .whyStudy img {
-    width: 31%;
-    height: 78vh;
+    width: 28%;
+    height: 35vh;
     display: flex;
     object-fit: contain;
     filter: grayscale(8%);
     position: absolute;
-    margin:-6% 66%;
+    margin: 0% 67%;
   }
 
   .internationalStudents img {
-    width: 31%;
-    height: 78vh;
+    width: 24%;
+    height: 47vh;
     display: flex;
     object-fit: contain;
     filter: grayscale(8%);
     position: absolute;
-    margin: -6% 8%;
+    margin: -3% 11%;
   }
 
 .studyAbroad h1{
-    font-family: 'Playfair Display', serif;
-    margin-top: 2%;
-    margin-left: 4%;
-    font-size: 35px;
-}
-
-.studyAbroad p{
-    font-family: 'Playfair Display', serif;
-    margin-top: 2%;
-    margin-left: 4%;
-    width: 56%;
-}
-
-.whyStudy h1{
-    font-family: 'Playfair Display', serif;
-    margin-top: 6%;
-    margin-left: 4%;
-    font-size: 35px;
-}
-
-.whyStudy-title h3{
-    font-family: 'Playfair Display', serif;
+    /* font-family: 'Playfair Display', serif; */
     margin-top: 2%;
     margin-left: 4%;
     font-size: 25px;
+    font-family: auto;
+
+}
+
+.studyAbroad p{
+    /* font-family: 'Playfair Display', serif; */
+    margin-left: 4%;
+    width: 56%;
+    font-size: 13px;
+}
+
+.whyStudy h1{
+  margin-top: 3%;
+  margin-left: 4%;
+  font-size: 25px;
+  font-family: auto;
+}
+
+.whyStudy-title h3{
+  margin-top: 1%;
+  margin-left: 4%;
+  font-size: 20px;
+  font-family: serif;
 
 }
 
 .whyStudy p{
-    font-family: 'Playfair Display', serif;
-    margin-top: 2%;
+    /* font-family: 'Playfair Display', serif; */
     margin-left: 4%;
     width: 56%;
+    font-size: 13px;
 }
 
 .internationalStudents h1{
-    font-family: 'Playfair Display', serif;
-    margin-top: 2%;
-    margin-left: 46%;
-    font-size: 35px;
+  /* font-family: 'Playfair Display', serif; */
+  margin-top: 5%;
+  margin-left: 46%;
+  font-size: 25px;
+   font-family: auto;
 
 }
 
 
 .internationalStudents p{
-    font-family: 'Playfair Display', serif;
-    margin-top: 2%;
-    margin-left: 46%;
+  margin-top: 1%;
+  margin-left: 46%;
+  font-size: 13px;
 }
 /* 
 .Fees-Fundingtab{
@@ -179,31 +220,30 @@
 } */
 
 .Fees-Funding h1{
-    font-family: 'Playfair Display', serif;
-    margin-top: 2%;
-    margin-left: 4%;
-    font-size: 35px;
-
+  margin-top: 5%;
+  margin-left: 4%;
+  font-size: 25px;
+  font-family: auto
   }
 
   .Fees-Funding p{
-    font-family: 'Playfair Display', serif;
-    margin-top: 2%;
     margin-left: 4%;
+    font-size: 13px;
   }
   .fee-Information h2{
-    font-family: 'Playfair Display', serif;
+    /* font-family: 'Playfair Display', serif; */
     margin-top: 2%;
     margin-left: 4%;
-    font-size: 30px;
-
+    font-size: 20px;
+font-family: auto;
   }
 
   .Funding h2{ 
-    font-family: 'Playfair Display', serif;
+    /* font-family: 'Playfair Display', serif; */
     margin-top: 2%;
     margin-left: 4%;
-    font-size: 30px;
+    font-size: 20px;
+    font-family: auto;
 
   }
 
@@ -222,30 +262,58 @@
   }
 
   .location h1{
-    font-family: 'Playfair Display', serif;
+    /* font-family: 'Playfair Display', serif; */
     margin-top: 2%;
     margin-left: 4%;
-    font-size: 35px;
+    font-size: 25px;
+    font-family: auto;
+
+
   }
 
   .location p{
-    font-family: 'Playfair Display', serif;
-    margin-top: 2%;
+    /* font-family: 'Playfair Display', serif; */
+    /* margin-top: 1%; */
     margin-left: 4%;
-    width:50%
+    width:50%;
+    font-size: 13px;
+    color: rgb(135, 122, 122);
   }
 
   .comment h1{
-    font-family: 'Playfair Display', serif;
-    margin-top: 2%;
-    margin-left: 4%;
-    font-size: 35px;
+    /* font-family: 'Playfair Display', serif; */
+    margin-top: 5%;
+    font-size: 20px;
+
+  }
+
+  .comment{
+    width: 30%;
+    margin: 0 4%;
 
   }
 
   .comment input{
-    font-family: 'Playfair Display', serif;
-    border-radius: 10px;
-    font-size: 20px;
-    margin: 2%  4%;
+    border: 1px solid green;
+    margin: 0 4%;
+    padding: 0px 15px;
+    font-size: 14px;
+    font-family: auto;
+    color: green;
+  }
+
+  .postt{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .btn-post{
+    height: 30px;
+    margin: auto;
+    width: 74px;
+    margin: 19px 21px
+  }
+
+  .user-comment{
+    margin: 0 4%;
   }

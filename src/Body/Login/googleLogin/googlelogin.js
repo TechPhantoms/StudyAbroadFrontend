@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
+import { Link } from "react-router-dom";
 import './googlelogin.css'
 
 function LoginGoogle() {
@@ -7,8 +8,12 @@ function LoginGoogle() {
     const clientId = "564375753622-sr6l0acb272mlprnadielp32i2b4u8ri.apps.googleusercontent.com";
     const [showloginButton, setShowloginButton] = useState(true);
     const [showlogoutButton, setShowlogoutButton] = useState(false);
+
+
+
     const onLoginSuccess = (res) => {
         console.log('Login Success:', res.profileObj);
+        // window.location.href="/"
         setShowloginButton(false);
         setShowlogoutButton(true);
     };

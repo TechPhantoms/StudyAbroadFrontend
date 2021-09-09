@@ -24,6 +24,7 @@ class ReadingTest extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            ReadingTest:[],
             questions,
             currentQuestion: {},
             nextQuestion: {},
@@ -42,7 +43,10 @@ class ReadingTest extends Component {
             nextButtonDisabled: false,
             perviousButtonDisabled: true,
             previousRandomNumbers: [],
-            paragraph: []
+            paragraph: [],
+                config: {
+            headers: { authorization: `Bearer ${localStorage.getItem('token')}` }
+        }
         };
         this.interval = null
         this.correctSound = React.createRef();
@@ -51,20 +55,20 @@ class ReadingTest extends Component {
     }
 
     componentDidMount() {
-        // axios.get('http://localhost:90/test/showall')
-        //     .then((response) => {
-        //         console.log(response)
-        //         this.setState({
-        //             // ReadingTest: response.data.data
-        //             questions: response.data.data
+        axios.get('http://localhost:90/test/showall')
+            .then((response) => {
+                console.log(response)
+                this.setState({
+                    ReadingTest: response.data.data
+                    // questions: response.data.data
 
-        //         })
+                })
 
 
-        //     })
-        //     .catch((err) => {
-        //         console.log(err.response)
-        //     })
+            })
+            .catch((err) => {
+                console.log(err.response)
+            })
 
 
 
@@ -391,12 +395,10 @@ class ReadingTest extends Component {
             time
         } = this.state;
         // const currentQuestion = this.state.questions[0]
-        // let questionIndex = 0;
-        // let answerBank = 0;
-        // let totalQuestions = paragraph.question
 
 
-        // const paragraph = this.state.questions[1];
+
+        const paragraph = this.state.ReadingTest[1];
 
         // let question = paragraph[questionIndex];
 
@@ -538,7 +540,7 @@ class ReadingTest extends Component {
                 <audio ref={this.buttonSound} src={buttonSound}></audio>
                 <p className='topic'>Read this passage and answer these MCQ questions</p>
 
-                {/* <div className='reading-para'>
+                <div className='reading-para'>
                    {
                         paragraph &&
                         (
@@ -551,7 +553,7 @@ class ReadingTest extends Component {
                         )
                     }
 
-                </div> */}
+                </div>
 
                 <div className='readingTest-section'>
                     {/* {this.state.questions.map((Questions) => {
@@ -582,6 +584,8 @@ class ReadingTest extends Component {
                                 </p>
                             </div>
                             <h5 className='question'>{currentQuestion.question}</h5>
+                            <div className='option-section'>
+
                             <div className='options-container'>
                                 <p onClick={this.handleOptionClick} className='option'>{currentQuestion.optionA}</p>
                                 <p onClick={this.handleOptionClick} className='option'>{currentQuestion.optionB}</p>
@@ -589,6 +593,7 @@ class ReadingTest extends Component {
                             <div className='options-container'>
                                 <p onClick={this.handleOptionClick} className='option'>{currentQuestion.optionC}</p>
                                 <p onClick={this.handleOptionClick} className='option'>{currentQuestion.optionD}</p>
+                            </div>
                             </div>
                             <div className='button-container'>
                                 <button

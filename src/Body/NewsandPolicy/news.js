@@ -35,13 +35,13 @@ class News extends Component{
                         <div id="news">{this.state.News.map((news) =>{
                             return(
                                 <div className = "news-container" key={news._id}>
-                                    <Link  to={'/newsdetails/' + news._id}>
+                                    {/* <Link  to={'/newsdetails/' + news._id}> */}
                                         <img src={`http://localhost:90/${news.Newsimage}`}  className='news-image'/>
-                                    </Link>
+                                    {/* </Link> */}
                                     <div className ='content'>
                                         <h3>
                                             <Link  to={`/news/showall/${news._id}`}>
-                                                {news.NewsTitle}
+                                                <h1 className='newss'>{news.NewsTitle}</h1>
                                             </Link>
                                         </h3>
                                         {/* <p>{news.NewsDetails}</p> */}
